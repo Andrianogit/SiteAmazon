@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WOMWEARS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #fff6f9;
+      color: #444;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: #e91e63;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    #searchInput {
+      padding: 12px 18px;
+      font-size: 16px;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+      display: block;
+      border: 2px solid #f8bbd0;
+      border-radius: 30px;
+      outline: none;
+      transition: 0.3s ease;
+    }
+
+    #searchInput:focus {
+      border-color: #ec407a;
+      box-shadow: 0 0 8px rgba(236, 64, 122, 0.2);
+    }
+
+    ul#productList {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    ul#productList li {
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+      padding: 16px;
+      transition: all 0.3s ease;
+    }
+
+    ul#productList li:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(233, 30, 99, 0.2);
+    }
+
+    ul#productList img {
+      width: 100%;
+      height: 741px;
+      object-fit: contain;
+      border-radius: 12px;
+      background-color: #fff;
+      display: block;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+
+    ul#productList p {
+      font-weight: 600;
+      font-size: 16px;
+      margin: 15px 0 10px;
+      color: #c2185b;
+    }
+
+    ul#productList a {
+      color: #ec407a;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-block;
+      margin-top: 5px;
+    }
+
+    ul#productList a:hover {
+      text-decoration: underline;
+    }
+
+    /* Убираем точки карусели */
+    .splide__pagination {
+      display: none !important;
+    }
+
+    /* Модальное окно */
+    #modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    #modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    @media screen and (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      ul#productList {
+        grid-template-columns: 1fr;
+      }
+
+      ul#productList img {
+        height: auto;
+        max-height: 500px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>WOMWEARS</h1>
+    <input type="text" id="searchInput" placeholder="Search for products...">
+  </header>
+  <ul id="productList">
+    {% for product in products %}
+    <li>
+      <div class="splide" id="splide-{{ loop.index }}">
+        <div class="splide__track">
+          <ul class="splide__list">
+            {% for image in product.images %}
+            <li class="splide__slide">
+              <img src="{{ image }}" alt="{{ product.title }}" onclick="openModal(this.src)">
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <p>{{ product.title }}</p>
+      <a href="{{ product.link }}" target="_blank">Buy on Amazon</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <!-- Модалка -->
+  <div id="modal" onclick="closeModal()">
+    <img id="modalImage" src="" alt="Modal image">
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      {% for product in products %}
+      new Splide('#splide-{{ loop.index }}', {
+        type: 'loop',
+        perPage: 1,
+        pagination: false,
+        arrows: true,
+        height: 'auto',
+      }).mount();
+      {% endfor %}
+
+      const searchInput = document.getElementById('searchInput');
+      const items = document.querySelectorAll('#productList li');
+      searchInput.addEventListener('input', function () {
+        const query = this.value.toLowerCase();
+        items.forEach(item => {
+          const text = item.querySelector('p').textContent.toLowerCase();
+          item.style.display = text.includes(query) ? 'block' : 'none';
+        });
+      });
+    });
+
+    function openModal(src) {
+      const modal = document.getElementById("modal");
+      const modalImg = document.getElementById("modalImage");
+      modal.style.display = "flex";
+      modalImg.src = src;
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
+</body>
+</html>
