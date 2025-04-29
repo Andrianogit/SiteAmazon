@@ -2,12 +2,39 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home and Kitchen</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WOMWEARS | Designer-Curated Fashion for Summer 2025</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Designer-curated women's fashion for Summer 2025. Explore stylish dresses, tops, and shoes from Amazon with WOMWEARS.">
+  <meta name="keywords" content="women's fashion 2025, summer dresses, designer picks, Amazon fashion, WOMWEARS">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="WOMWEARS">
+  <!-- Open Graph Tags for Social Media -->
+  <meta property="og:title" content="WOMWEARS | Designer-Curated Fashion for Summer 2025">
+  <meta property="og:description"
+    content="Designer-curated women's fashion for Summer 2025. Explore stylish dresses, tops, and shoes from Amazon with WOMWEARS.">
+  <meta property="og:image" content="https://womwears.netlify.app/images/logo.jpg">
+  <meta property="og:url" content="https://womwears.netlify.app">
+  <meta property="og:type" content="website">
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="WOMWEARS | Designer-Curated Fashion for Summer 2025">
+  <meta name="twitter:description"
+    content="Designer-curated women's fashion for Summer 2025. Explore stylish dresses, tops, and shoes from Amazon with WOMWEARS.">
+  <meta name="twitter:image" content="https://womwears.netlify.app/images/logo.jpg">
+  <!-- Google Tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYM3PQKGJL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-CYM3PQKGJL');
+  </script>
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Montserrat:wght@400;600&display=swap"
-    rel="stylesheet" />
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
   <style>
     * {
@@ -19,7 +46,6 @@
     body {
       font-family: 'Montserrat', sans-serif;
       background: #fff6f9;
-      color: #444;
       padding: 20px;
     }
 
@@ -31,9 +57,8 @@
     header h1 {
       font-family: 'Playfair Display', serif;
       font-size: 3rem;
-      color: #6b8e23;
+      color: #e91e63;
       margin-bottom: 15px;
-      letter-spacing: 1px;
     }
 
     #searchInput {
@@ -43,18 +68,66 @@
       max-width: 400px;
       margin: 0 auto;
       display: block;
-      border: 2px solid #c0f8bb;
+      border: 2px solid #f8bbd0;
       border-radius: 30px;
-      outline: none;
-      transition: 0.3s ease;
     }
 
-    #searchInput:focus {
-      border-color: #6b8e23;
-      box-shadow: 0 0 8px rgba(107, 142, 35, 0.2);
+    /* Summer Banner Styles */
+    .summer-banner {
+      background-color: #f7e4bc;
+      color: #333;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 20px;
     }
 
-    ul#productList {
+    /* Why Choose Us Section Styles */
+    .why-choose-us {
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    /* Styles for Tabs */
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .tab-button {
+      padding: 10px 20px;
+      margin: 5px;
+      background: #fce4ec;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: capitalize;
+      transition: background 0.3s;
+    }
+
+    .tab-button:hover {
+      background: #f48fb1;
+    }
+
+    .tab-button.active {
+      background: #f06292;
+    }
+
+    /* Styles for Products */
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    ul.product-list {
       list-style: none;
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -62,163 +135,1074 @@
       margin-top: 30px;
     }
 
-    ul#productList li {
-      background: #ffffff;
+    ul.product-list li {
+      background: #fff;
       border-radius: 18px;
       box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
       padding: 16px;
-      transition: all 0.3s ease;
     }
 
-    ul#productList li:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 20px rgba(233, 30, 99, 0.2);
-    }
-
-    ul#productList img {
+    ul.product-list img {
       width: 100%;
-      height: 741px;
-      object-fit: contain;
+      height: 400px;
+      object-fit: cover;
       border-radius: 12px;
-      background-color: #fff;
-      display: block;
-      margin: 0 auto;
+      background: #fff;
       cursor: pointer;
     }
 
-    ul#productList p {
+    ul.product-list p {
       font-weight: 600;
       font-size: 16px;
       margin: 15px 0 10px;
-      color: #4e6e0e;
+      color: #c2185b;
     }
 
-    ul#productList a {
-      color: #6b8e23;
+    ul.product-list p.designer-note {
+      font-style: italic;
+      color: #666;
+      font-weight: 400;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    ul.product-list p.designer-note strong {
+      color: #e91e63;
+    }
+
+    ul.product-list a {
+      color: #ec407a;
       text-decoration: none;
-      font-weight: 500;
-      display: inline-block;
-      margin-top: 5px;
     }
 
-    ul#productList a:hover {
-      text-decoration: underline;
+    .category {
+      font-size: 14px;
+      color: #999;
+      margin-top: 8px;
+      font-weight: 600;
     }
 
-    /* Убираем точки карусели */
-    .splide__pagination {
-      display: none !important;
+    /* Sorting */
+    .sort-container {
+      text-align: center;
+      margin-bottom: 20px;
     }
 
-    /* Модальное окно */
+    #sortSelect {
+      padding: 8px 16px;
+      font-size: 16px;
+      border-radius: 20px;
+      border: 2px solid #f8bbd0;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    /* Modal Window */
     #modal {
       display: none;
       position: fixed;
-      z-index: 999;
-      left: 0;
       top: 0;
+      left: 0;
       width: 100vw;
       height: 100vh;
       background: rgba(0, 0, 0, 0.8);
       justify-content: center;
       align-items: center;
+      z-index: 9999;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    #modal.show {
+      opacity: 1;
+    }
+
+    #modal .splide {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.9);
+      width: 80%;
+      max-width: 700px;
+      max-height: 80vh;
+      transition: transform 0.3s ease;
+    }
+
+    #modal.show .splide {
+      transform: translate(-50%, -50%) scale(1);
     }
 
     #modal img {
-      max-width: 90%;
-      max-height: 90%;
+      width: 100%;
+      height: auto;
       border-radius: 10px;
     }
 
+    /* Back to Top Button */
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #e91e63;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 1000;
+    }
+
+    #backToTop.visible {
+      opacity: 1;
+    }
+
+    #backToTop:hover {
+      background: #f06292;
+    }
+
+    /* Responsiveness */
     @media screen and (max-width: 600px) {
       header h1 {
         font-size: 2rem;
       }
 
-      ul#productList {
+      ul.product-list {
         grid-template-columns: 1fr;
       }
 
-      ul#productList img {
-        height: auto;
-        max-height: 500px;
+      ul.product-list img {
+        height: 300px;
+      }
+
+      #modal .splide {
+        width: 90%;
+        max-height: 70vh;
+      }
+
+      .tab-button {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+
+      #backToTop {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 20px;
       }
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <h1>Home and Kitchen</h1>
-    <input type="text" id="searchInput" placeholder="Search for products...">
-  </header>
-  <ul id="productList">
-    
-    <li>
-      <div class="splide" id="splide-1">
-        <div class="splide__track">
-          <ul class="splide__list">
-            
-            <li class="splide__slide">
-              <img src="https://f.media-amazon.com/images/I/810-Z1ODvpL._SX425_.jpg" alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel" onclick="openModal(this.src)">
-            </li>
-            
-            <li class="splide__slide">
-              <img src="https://f.media-amazon.com/images/I/81ValwUwqtL._SX425_.jpg" alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel" onclick="openModal(this.src)">
-            </li>
-            
-            <li class="splide__slide">
-              <img src="https://f.media-amazon.com/images/I/81vtR03L33L._SX425_.jpg" alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel" onclick="openModal(this.src)">
-            </li>
-            
-          </ul>
-        </div>
-      </div>
-      <p>Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel</p>
-      <a href="https://amzn.to/42D7kbC" target="_blank">Buy on Amazon</a>
-    </li>
-    
-  </ul>
-
-  <!-- Модалка -->
-  <div id="modal" onclick="closeModal()">
-    <img id="modalImage" src="" alt="Modal image">
+  <!-- Summer 2025 Banner -->
+  <div class="summer-banner">
+    <h1>Summer 2025: Designer-Curated Women's Fashion</h1>
+    <p>WOMWEARS brings you the best dresses, tops, cardigans, and shoes from Amazon, handpicked by our designer for the
+      modern woman.</p>
   </div>
+
+  <header>
+    <a href="/" style="text-decoration: none;">
+      <img src="/images/logo.png" alt="WOMWEARS Logo" style="max-width: 150px; margin-bottom: 15px;" loading="lazy">
+    </a>
+    <p>Designer-Curated Fashion for Summer 2025</p>
+    <input type="text" id="searchInput" placeholder="Search products..." aria-label="Search products">
+  </header>
+
+  <!-- Why Choose Us Section -->
+  <div class="why-choose-us">
+    <h2>Why Choose WOMWEARS?</h2>
+    <p>Our collections are curated by a professional designer who follows the latest 2025 trends. We select only the
+      best pieces from Amazon to ensure you look stylish and feel confident this summer.</p>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    
+    
+    <button class="tab-button" data-tab="dresses">dresses</button>
+    
+    
+    
+    <button class="tab-button" data-tab="tops">tops</button>
+    
+    
+    
+    <button class="tab-button" data-tab="cardigans">cardigans</button>
+    
+    
+    
+    <button class="tab-button" data-tab="bags">bags</button>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <button class="tab-button" data-tab="shoes">shoes</button>
+    
+    
+  </div>
+
+  <!-- Sorting -->
+  <div class="sort-container">
+    <select id="sortSelect" aria-label="Sort products">
+      <option value="default">Sort by: Default</option>
+      <option value="title-asc">Sort by Title (A-Z)</option>
+      <option value="title-desc">Sort by Title (Z-A)</option>
+    </select>
+  </div>
+
+  <!-- Tab Content -->
+  
+  
+  <div class="tab-content" id="dresses">
+    <h2>Summer 2025 Dresses: Designer's Picks</h2>
+    <ul class="product-list">
+      
+      <li data-images='["https://c.media-amazon.com/images/I/61+Mex6Ez9L._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/81IoIWiyb9L._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/81n7KbYPm-L._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/81gl2JUy0VL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/81yavvUqzhL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/810g1sTduyL._AC_SY741_.jpg"]' data-title="ANRABESS Womens Summer Casual Maxi Dress V Neck Ruffle Sleeve Long Dresses Fashion Flowy Tiered Boho Beach Vacation Sundress">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/61+Mex6Ez9L._AC_SY741_.jpg"
+            alt="ANRABESS Womens Summer Casual Maxi Dress V Neck Ruffle Sleeve Long Dresses Fashion Flowy Tiered Boho Beach Vacation Sundress in dresses category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>ANRABESS Womens Summer Casual Maxi Dress V Neck Ruffle Sleeve Long Dresses Fashion Flowy Tiered Boho Beach Vacation Sundress</p>
+        <p class="category">Category: dresses</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This dresse is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/42PwZg3" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/7152ibJCFuL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/71FPfIrCB2L._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/71XqyOgAJbL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/71XhGJYRwYL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/81lhDRcjFrL._AC_SY741_.jpg"]' data-title="ANRILITA Maxi Dress for Women Wrap V Neck Short Sleeve Empire Pleated Waist Summer Casual Elegant Long Dresses with Pockets">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/7152ibJCFuL._AC_SY741_.jpg"
+            alt="ANRILITA Maxi Dress for Women Wrap V Neck Short Sleeve Empire Pleated Waist Summer Casual Elegant Long Dresses with Pockets in dresses category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>ANRILITA Maxi Dress for Women Wrap V Neck Short Sleeve Empire Pleated Waist Summer Casual Elegant Long Dresses with Pockets</p>
+        <p class="category">Category: dresses</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This dresse is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/4jwvlHa" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/81zQf8MpjKL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/818eyMFGnYL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/81fEm3v3iYL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/813AcwckgCL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/81TWk-acRiL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/61eiu2HcxhL._AC_SX569_.jpg"]' data-title="ZESICA Women&#39;s 2025 Summer Short Sleeve Maxi Dress Casual V Neck Hollow Out Eyelet Ruffle Swing A Line Long Dresses">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/81zQf8MpjKL._AC_SX569_.jpg"
+            alt="ZESICA Women&#39;s 2025 Summer Short Sleeve Maxi Dress Casual V Neck Hollow Out Eyelet Ruffle Swing A Line Long Dresses in dresses category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>ZESICA Women&#39;s 2025 Summer Short Sleeve Maxi Dress Casual V Neck Hollow Out Eyelet Ruffle Swing A Line Long Dresses</p>
+        <p class="category">Category: dresses</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This dresse is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/42JMXIq" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/81ye5uq2TeL._AC_SX679_.jpg", "https://c.media-amazon.com/images/I/81qnESMH3yL._AC_SX679_.jpg", "https://c.media-amazon.com/images/I/91XgM9nfzcL._AC_SX679_.jpg", "https://c.media-amazon.com/images/I/81PXnSsJO8L._AC_SX679_.jpg"]' data-title="Womens Casual Tiered Swing Midi Dress Ruffle Sleeve V Neck A Line Loose Summer Dresses with Pockets">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/81ye5uq2TeL._AC_SX679_.jpg"
+            alt="Womens Casual Tiered Swing Midi Dress Ruffle Sleeve V Neck A Line Loose Summer Dresses with Pockets in dresses category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>Womens Casual Tiered Swing Midi Dress Ruffle Sleeve V Neck A Line Loose Summer Dresses with Pockets</p>
+        <p class="category">Category: dresses</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This dresse is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/445HLRu" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/81cd55eSqbL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/81fPmNtzKNL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/718+4seNS3L._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/71DDJxfgJXL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/71OFokdZgIL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/71VPrjPTXqL._AC_SY741_.jpg"]' data-title="Berydress Women&#39;s Casual Summer Tiered Midi Dress 2025 Short Sleeve V-Neck Loose Cotton Ruffle Babydoll Dress Boho Sundress">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/81cd55eSqbL._AC_SY741_.jpg"
+            alt="Berydress Women&#39;s Casual Summer Tiered Midi Dress 2025 Short Sleeve V-Neck Loose Cotton Ruffle Babydoll Dress Boho Sundress in dresses category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>Berydress Women&#39;s Casual Summer Tiered Midi Dress 2025 Short Sleeve V-Neck Loose Cotton Ruffle Babydoll Dress Boho Sundress</p>
+        <p class="category">Category: dresses</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This dresse is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/42sLKX5" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/71n-Z0QySTL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/71u+2UNLpSL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/71KEZMNGoiL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/71tAJeaB+uL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/71WzPuW7EWL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/712lc96AYPL._AC_SY741_.jpg"]' data-title="Berydress Women&#39;s Smocked Wrap Dress 2025 Square Neck Short Sleeve Sundress Summer Floral Ruffle Beach Mini Dresses">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/71n-Z0QySTL._AC_SY741_.jpg"
+            alt="Berydress Women&#39;s Smocked Wrap Dress 2025 Square Neck Short Sleeve Sundress Summer Floral Ruffle Beach Mini Dresses in dresses category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>Berydress Women&#39;s Smocked Wrap Dress 2025 Square Neck Short Sleeve Sundress Summer Floral Ruffle Beach Mini Dresses</p>
+        <p class="category">Category: dresses</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This dresse is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/4cPuJde" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/719Ip8bwihL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/61d3a7ozP0L._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/61C+a-7KUTL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/71ROrVgTjSL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/61A4DR7FojL._AC_SY741_.jpg"]' data-title="Womens Summer Dress- Square Neck Puff Sleeve Smocked Ruffle Hem A-line Mini Short Dresses">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/719Ip8bwihL._AC_SY741_.jpg"
+            alt="Womens Summer Dress- Square Neck Puff Sleeve Smocked Ruffle Hem A-line Mini Short Dresses in dresses category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>Womens Summer Dress- Square Neck Puff Sleeve Smocked Ruffle Hem A-line Mini Short Dresses</p>
+        <p class="category">Category: dresses</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This dresse is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/3EFd4rV" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/71VQkKBT54L._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/81IsR+iro-L._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/71Z7pQR9SyL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/71cfMdxfp5L._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/71Yh7HB+AIL._AC_SY741_.jpg"]' data-title="Women Puff Sleeve Square Neck Tie in Back Dresses with Zipper">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/71VQkKBT54L._AC_SY741_.jpg"
+            alt="Women Puff Sleeve Square Neck Tie in Back Dresses with Zipper in dresses category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>Women Puff Sleeve Square Neck Tie in Back Dresses with Zipper</p>
+        <p class="category">Category: dresses</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This dresse is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/3Ey8qvX" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/71nSZpmXtoL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/71lreVhy70L._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/61j2tHNGjpL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/61n7W5BUheL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/613xXxls3eL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/71dUiGZo+IL._AC_SY741_.jpg"]' data-title="ANRABESS Women&#39;s Summer Casual Sleeveless Square Neck Dress 2025 Smocked Ruffle Backless Boho Beach Cute Teen Short Sundress">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/71nSZpmXtoL._AC_SY741_.jpg"
+            alt="ANRABESS Women&#39;s Summer Casual Sleeveless Square Neck Dress 2025 Smocked Ruffle Backless Boho Beach Cute Teen Short Sundress in dresses category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>ANRABESS Women&#39;s Summer Casual Sleeveless Square Neck Dress 2025 Smocked Ruffle Backless Boho Beach Cute Teen Short Sundress</p>
+        <p class="category">Category: dresses</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This dresse is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/3YcTY3a" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  
+  
+  <div class="tab-content" id="tops">
+    <h2>Summer 2025 Tops: Designer's Picks</h2>
+    <ul class="product-list">
+      
+      <li data-images='["https://c.media-amazon.com/images/I/91jzyXNGZmL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/81eJm6LRmvL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/81ZafvGSv2L._AC_SX569_.jpg"]' data-title="U.Vomade Women&#39;s 3/4 Sleeve Plus Size Tops Collared V Neck Casual Comfy Work Blouses L-4X">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/91jzyXNGZmL._AC_SX569_.jpg"
+            alt="U.Vomade Women&#39;s 3/4 Sleeve Plus Size Tops Collared V Neck Casual Comfy Work Blouses L-4X in tops category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>U.Vomade Women&#39;s 3/4 Sleeve Plus Size Tops Collared V Neck Casual Comfy Work Blouses L-4X</p>
+        <p class="category">Category: tops</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This top is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/4lRzHdI" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/81Rlk63IcNL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/71BD4VRL5TL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/81zvSMdphOL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/71lADb+M9sL._AC_SY741_.jpg"]' data-title="Zeagoo Womens 3/4 Length Sleeve Tunic Tops Casual V Neck Shirts Basic Tees Business Work Blouses Summer Fall 2025 Clothes">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/81Rlk63IcNL._AC_SY741_.jpg"
+            alt="Zeagoo Womens 3/4 Length Sleeve Tunic Tops Casual V Neck Shirts Basic Tees Business Work Blouses Summer Fall 2025 Clothes in tops category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>Zeagoo Womens 3/4 Length Sleeve Tunic Tops Casual V Neck Shirts Basic Tees Business Work Blouses Summer Fall 2025 Clothes</p>
+        <p class="category">Category: tops</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This top is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/4itJAer" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/81R0I3wZd2L._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/81bVJdlKxZL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/81xkAE38e5L._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/81sN-NTLtOL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/718dT-rwq9L._AC_SX569_.jpg"]' data-title="LUYAA 3/4 Length Sleeve Womens Tops V Neck Tunic Tops Dressy Casual Pleated Shirts Fashion Tops for Women Trendy">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/81R0I3wZd2L._AC_SX569_.jpg"
+            alt="LUYAA 3/4 Length Sleeve Womens Tops V Neck Tunic Tops Dressy Casual Pleated Shirts Fashion Tops for Women Trendy in tops category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>LUYAA 3/4 Length Sleeve Womens Tops V Neck Tunic Tops Dressy Casual Pleated Shirts Fashion Tops for Women Trendy</p>
+        <p class="category">Category: tops</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This top is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/4cN14kH" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/91Xg7vutGVL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/81dSzXK2d5L._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/81Q2-mmflcL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/91VVBUYJkOL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/91dTlwoW2AL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/71E73TgI79L._AC_SX569_.jpg"]' data-title="3/4 Length Sleeve Womens Tops Summer Ruffle Sleeve Blouses V-Neck Lace T-Shirts Dressy Casual">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/91Xg7vutGVL._AC_SX569_.jpg"
+            alt="3/4 Length Sleeve Womens Tops Summer Ruffle Sleeve Blouses V-Neck Lace T-Shirts Dressy Casual in tops category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>3/4 Length Sleeve Womens Tops Summer Ruffle Sleeve Blouses V-Neck Lace T-Shirts Dressy Casual</p>
+        <p class="category">Category: tops</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This top is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/42LLrp6" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/81R-sszi8sL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/81qkIof+ipL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/81X44PnelTL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/81YjZrzt87L._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/81o1zvjOyGL._AC_SX569_.jpg"]' data-title="Romanstii 3/4 Length Sleeve Womens Tops Keyhole Crewneck Shirts Business Dressy Casual Tunic Blouses Summer Basic Tees">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/81R-sszi8sL._AC_SX569_.jpg"
+            alt="Romanstii 3/4 Length Sleeve Womens Tops Keyhole Crewneck Shirts Business Dressy Casual Tunic Blouses Summer Basic Tees in tops category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>Romanstii 3/4 Length Sleeve Womens Tops Keyhole Crewneck Shirts Business Dressy Casual Tunic Blouses Summer Basic Tees</p>
+        <p class="category">Category: tops</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This top is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/3EEmROW" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://m.media-amazon.com/images/I/61-+Zumb32L._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/61hpDVpiIHL._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/61UUVoda4zL._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/71IggeiOJgL._AC_SX679_.jpg"]' data-title="Cotton Linen Shirts for Women Summer Casual Crewneck Pullover Tops Comfy Loose Women&#39;s Short Sleeve T Shirt">
+        <div class="product-images">
+          
+          <img src="https://m.media-amazon.com/images/I/61-+Zumb32L._AC_SX679_.jpg"
+            alt="Cotton Linen Shirts for Women Summer Casual Crewneck Pullover Tops Comfy Loose Women&#39;s Short Sleeve T Shirt in tops category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>Cotton Linen Shirts for Women Summer Casual Crewneck Pullover Tops Comfy Loose Women&#39;s Short Sleeve T Shirt</p>
+        <p class="category">Category: tops</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This top is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/3GmQmpe" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://m.media-amazon.com/images/I/81-5Hc2tHrL._AC_SY741_.jpg", "https://m.media-amazon.com/images/I/81TkrfVWswL._AC_SY741_.jpg", "https://m.media-amazon.com/images/I/71cmAYf53qL._AC_SY741_.jpg", "https://m.media-amazon.com/images/I/81hfDLWl56L._AC_SY741_.jpg"]' data-title="ROSELINLIN Women&#39;s Short Sleeve Shirts Floral Summer Tops Loose Fit for Leggings">
+        <div class="product-images">
+          
+          <img src="https://m.media-amazon.com/images/I/81-5Hc2tHrL._AC_SY741_.jpg"
+            alt="ROSELINLIN Women&#39;s Short Sleeve Shirts Floral Summer Tops Loose Fit for Leggings in tops category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>ROSELINLIN Women&#39;s Short Sleeve Shirts Floral Summer Tops Loose Fit for Leggings</p>
+        <p class="category">Category: tops</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This top is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/3RYc7hk" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://m.media-amazon.com/images/I/81oT3AT-4IL._AC_SY741_.jpg", "https://m.media-amazon.com/images/I/81TzofTCOPL._AC_SY741_.jpg", "https://m.media-amazon.com/images/I/71q9OxMIZ-L._AC_SY741_.jpg", "https://m.media-amazon.com/images/I/81P3JZfhKrL._AC_SY741_.jpg"]' data-title="ROSELINLIN Womens Long Sleeve Tunic Tops Floral Fall Blouse Shirts">
+        <div class="product-images">
+          
+          <img src="https://m.media-amazon.com/images/I/81oT3AT-4IL._AC_SY741_.jpg"
+            alt="ROSELINLIN Womens Long Sleeve Tunic Tops Floral Fall Blouse Shirts in tops category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>ROSELINLIN Womens Long Sleeve Tunic Tops Floral Fall Blouse Shirts</p>
+        <p class="category">Category: tops</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This top is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/4lHaFO4" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://m.media-amazon.com/images/I/91v0HJqUuwL._AC_SY500_.jpg", "https://m.media-amazon.com/images/I/81LnBnbTEKL._AC_SY500_.jpg", "https://m.media-amazon.com/images/I/81ZxlSy9D0L._AC_SY500_.jpg", "https://m.media-amazon.com/images/I/81c2omwFewL._AC_SY500_.jpg", "https://m.media-amazon.com/images/I/81WRGAoE4EL._AC_SY500_.jpg"]' data-title="AKEWEI Womens Summer Tops V Neck T Shirts Pleated Clothes Spring Fashion Blouses">
+        <div class="product-images">
+          
+          <img src="https://m.media-amazon.com/images/I/91v0HJqUuwL._AC_SY500_.jpg"
+            alt="AKEWEI Womens Summer Tops V Neck T Shirts Pleated Clothes Spring Fashion Blouses in tops category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>AKEWEI Womens Summer Tops V Neck T Shirts Pleated Clothes Spring Fashion Blouses</p>
+        <p class="category">Category: tops</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This top is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/42I0eRQ" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/61WfO5R3KSL._AC_SX679_.jpg", "https://c.media-amazon.com/images/I/61EoFrfY0DL._AC_SX679_.jpg", "https://c.media-amazon.com/images/I/6168hRK6v7L._AC_SX679_.jpg", "https://c.media-amazon.com/images/I/61s6nOLYE5L._AC_SX679_.jpg", "https://c.media-amazon.com/images/I/61pMv8hR8qL._AC_SX679_.jpg"]' data-title="Boho Floral Linen Shirt for Women V Neck Long Sleeve Blouse Vintage Printed Casual Loose Fit Fall Tunic Tops">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/61WfO5R3KSL._AC_SX679_.jpg"
+            alt="Boho Floral Linen Shirt for Women V Neck Long Sleeve Blouse Vintage Printed Casual Loose Fit Fall Tunic Tops in tops category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>Boho Floral Linen Shirt for Women V Neck Long Sleeve Blouse Vintage Printed Casual Loose Fit Fall Tunic Tops</p>
+        <p class="category">Category: tops</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This top is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/4jEmumm" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/71jYPxijUeL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/81lpzQIMUwL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/71Kieqj8xbL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/81QJ-ljc0nL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/81s7mLfSU3L._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/81stOwh8EkL._AC_SX569_.jpg"]' data-title="Blooming Jelly Womens Dressy Casual Blouses 3/4 Sleeve V Neck Ruffle Tops Business Ladies Summer 2025 Trendy Work Shirt">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/71jYPxijUeL._AC_SX569_.jpg"
+            alt="Blooming Jelly Womens Dressy Casual Blouses 3/4 Sleeve V Neck Ruffle Tops Business Ladies Summer 2025 Trendy Work Shirt in tops category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>Blooming Jelly Womens Dressy Casual Blouses 3/4 Sleeve V Neck Ruffle Tops Business Ladies Summer 2025 Trendy Work Shirt</p>
+        <p class="category">Category: tops</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This top is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/3EATCMY" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/71Ob+Zkc11L._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/717yNbjTLeL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/71NJ97FY40L._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/7142JKtyixL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/712Fn3N6IJL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/71FCv0dfqAL._AC_SX569_.jpg"]' data-title="Bebonnie Women&#39;s Button Down Shirts Short Sleeve Dress Shirts Collared Work Office Blouses">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/71Ob+Zkc11L._AC_SX569_.jpg"
+            alt="Bebonnie Women&#39;s Button Down Shirts Short Sleeve Dress Shirts Collared Work Office Blouses in tops category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>Bebonnie Women&#39;s Button Down Shirts Short Sleeve Dress Shirts Collared Work Office Blouses</p>
+        <p class="category">Category: tops</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This top is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/4jNXWYo" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/71TtkME3P4L._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/71BtzcxyiBL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/71VwjorxUSL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/71DOIJ3KHEL._AC_SY741_.jpg"]' data-title="Womens Summer Tops Crewneck Short Sleeve Shirts Casual Chiffon Blouses Flowy Lace Hem Boho Clothing Trendy 2025">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/71TtkME3P4L._AC_SY741_.jpg"
+            alt="Womens Summer Tops Crewneck Short Sleeve Shirts Casual Chiffon Blouses Flowy Lace Hem Boho Clothing Trendy 2025 in tops category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>Womens Summer Tops Crewneck Short Sleeve Shirts Casual Chiffon Blouses Flowy Lace Hem Boho Clothing Trendy 2025</p>
+        <p class="category">Category: tops</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This top is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/442I3IV" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/91GpFxgIUeL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/81ap67x5VTL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/81iQgRkaC+L._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/811S9LmmUFL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/815KH7qGw7L._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/91ew9qutSaL._AC_SX569_.jpg"]' data-title="LOMON Women&#39;s 2025 Fashion Tops 3/4 Length Sleeve Business Casual Blouses Summer Tees Shirts">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/91GpFxgIUeL._AC_SX569_.jpg"
+            alt="LOMON Women&#39;s 2025 Fashion Tops 3/4 Length Sleeve Business Casual Blouses Summer Tees Shirts in tops category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>LOMON Women&#39;s 2025 Fashion Tops 3/4 Length Sleeve Business Casual Blouses Summer Tees Shirts</p>
+        <p class="category">Category: tops</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This top is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/4iw84nt" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/81EPDo0f4fL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/81vzOaTwOvL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/81OyM9xzRbL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/81Io2xJZUPL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/81ERnTEMEGL._AC_SX569_.jpg"]' data-title="Lotusmile Summer Chiffon Dressy Casual Blouses Elegant Ruffle Short Sleeve Work Tops for Women Trendy">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/81EPDo0f4fL._AC_SX569_.jpg"
+            alt="Lotusmile Summer Chiffon Dressy Casual Blouses Elegant Ruffle Short Sleeve Work Tops for Women Trendy in tops category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>Lotusmile Summer Chiffon Dressy Casual Blouses Elegant Ruffle Short Sleeve Work Tops for Women Trendy</p>
+        <p class="category">Category: tops</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This top is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/4jFIcq0" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/8191tlSoooL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/81lkl+hb07L._AC_SX679_.jpg", "https://c.media-amazon.com/images/I/813HnW3sORL._AC_SX679_.jpg", "https://c.media-amazon.com/images/I/819g27sdasL._AC_SX679_.jpg", "https://c.media-amazon.com/images/I/81q7f6TKbHL._AC_SX679_.jpg"]' data-title="Blingfit 3/4 Length Sleeve Shirts for Womens Pleated Summer Tops 2025 Ruffle Bell Sleeve Fasion Trendy Spring Blouses">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/8191tlSoooL._AC_SY741_.jpg"
+            alt="Blingfit 3/4 Length Sleeve Shirts for Womens Pleated Summer Tops 2025 Ruffle Bell Sleeve Fasion Trendy Spring Blouses in tops category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>Blingfit 3/4 Length Sleeve Shirts for Womens Pleated Summer Tops 2025 Ruffle Bell Sleeve Fasion Trendy Spring Blouses</p>
+        <p class="category">Category: tops</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This top is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/4jNdY4E" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/81KEuAzxzRL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/81Wem+TtO5L._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/81IBiu6s2yL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/81z8ob0mAWL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/81rDHCPs+BL._AC_SX569_.jpg"]' data-title="KTILG Women&#39;s V Neck T Shirts 3/4 Sleeve Blouse Summer Tops Dressy Casual Solid Basic Tees">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/81KEuAzxzRL._AC_SX569_.jpg"
+            alt="KTILG Women&#39;s V Neck T Shirts 3/4 Sleeve Blouse Summer Tops Dressy Casual Solid Basic Tees in tops category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>KTILG Women&#39;s V Neck T Shirts 3/4 Sleeve Blouse Summer Tops Dressy Casual Solid Basic Tees</p>
+        <p class="category">Category: tops</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This top is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/4iv1Tjy" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  
+  
+  <div class="tab-content" id="cardigans">
+    <h2>Summer 2025 Cardigans: Designer's Picks</h2>
+    <ul class="product-list">
+      
+      <li data-images='["https://c.media-amazon.com/images/I/71SNAwpQG9L._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/61rrcFVCIeL._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/71C968SRg7L._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/61ryQm12p-L._AC_SX569_.jpg", "https://c.media-amazon.com/images/I/61Ij0nn31YL._AC_SX569_.jpg"]' data-title="Amazon Essentials Women&#39;s Relaxed-Fit Lightweight Lounge Open-Front Cardigan">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/71SNAwpQG9L._AC_SX569_.jpg"
+            alt="Amazon Essentials Women&#39;s Relaxed-Fit Lightweight Lounge Open-Front Cardigan in cardigans category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>Amazon Essentials Women&#39;s Relaxed-Fit Lightweight Lounge Open-Front Cardigan</p>
+        <p class="category">Category: cardigans</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> RELAXED FIT: Relaxed, comfortable fit through the body.</p>
+        <a href="https://amzn.to/3Gwjcna" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/619TYxjXh6L._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/711x-trqIiL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/71SXXyp0GzL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/71ibUvAtKgL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/7127V+kWKEL._AC_SY741_.jpg", "https://c.media-amazon.com/images/I/71q1xDfMz6L._AC_SY741_.jpg"]' data-title="ANRABESS Women Striped Cardigan Sweaters Button Down Cropped Knit Lady Jackets Coat 2025 Fall Outfits Spring Trendy Clothes">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/619TYxjXh6L._AC_SY741_.jpg"
+            alt="ANRABESS Women Striped Cardigan Sweaters Button Down Cropped Knit Lady Jackets Coat 2025 Fall Outfits Spring Trendy Clothes in cardigans category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>ANRABESS Women Striped Cardigan Sweaters Button Down Cropped Knit Lady Jackets Coat 2025 Fall Outfits Spring Trendy Clothes</p>
+        <p class="category">Category: cardigans</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This striped cropped cardigan is a standout piece for 2025, blending spring freshness with fall versatility. Its lightweight knit and trendy button-down design make it perfect for layering over dresses or pairing with high-waisted jeans for a chic, modern look.</p>
+        <a href="https://amzn.to/4jKJfoE" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://m.media-amazon.com/images/I/81lQd5FvH5L._AC_SY741_.jpg", "https://m.media-amazon.com/images/I/81WG9m+pOSL._AC_SY741_.jpg", "https://m.media-amazon.com/images/I/91cFin+u8zL._AC_SY741_.jpg", "https://m.media-amazon.com/images/I/71XIVlXrpPL._AC_SY741_.jpg"]' data-title="Arach&amp;Cloz Womens Cropped Cardigan Lightweight 2025 Long Sleeve Bolero Shrug Knit Sweater Tops Cozy Clouds">
+        <div class="product-images">
+          
+          <img src="https://m.media-amazon.com/images/I/81lQd5FvH5L._AC_SY741_.jpg"
+            alt="Arach&amp;Cloz Womens Cropped Cardigan Lightweight 2025 Long Sleeve Bolero Shrug Knit Sweater Tops Cozy Clouds in cardigans category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>Arach&amp;Cloz Womens Cropped Cardigan Lightweight 2025 Long Sleeve Bolero Shrug Knit Sweater Tops Cozy Clouds</p>
+        <p class="category">Category: cardigans</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This cardigan is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/3EhK21C" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  
+  
+  <div class="tab-content" id="bags">
+    <h2>Summer 2025 Bags: Designer's Picks</h2>
+    <ul class="product-list">
+      
+      <li data-images='["https://f.media-amazon.com/images/I/810-Z1ODvpL._SX425_.jpg", "https://f.media-amazon.com/images/I/81ValwUwqtL._SX425_.jpg", "https://f.media-amazon.com/images/I/81vtR03L33L._SX425_.jpg"]' data-title="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel">
+        <div class="product-images">
+          
+          <img src="https://f.media-amazon.com/images/I/810-Z1ODvpL._SX425_.jpg"
+            alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel in bags category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel</p>
+        <p class="category">Category: bags</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This bag is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/42D7kbC" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://f.media-amazon.com/images/I/810-Z1ODvpL._SX425_.jpg", "https://f.media-amazon.com/images/I/81ValwUwqtL._SX425_.jpg", "https://f.media-amazon.com/images/I/81vtR03L33L._SX425_.jpg"]' data-title="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel">
+        <div class="product-images">
+          
+          <img src="https://f.media-amazon.com/images/I/810-Z1ODvpL._SX425_.jpg"
+            alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel in bags category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel</p>
+        <p class="category">Category: bags</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This bag is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/42D7kbC" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="tab-content" id="shoes">
+    <h2>Summer 2025 Shoes: Designer's Picks</h2>
+    <ul class="product-list">
+      
+      <li data-images='["https://c.media-amazon.com/images/I/81d6SzhGsGL._AC_SX625_.jpg", "https://c.media-amazon.com/images/I/51hTLDOagtL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/51GotGTzfQL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/51X+gGlHotL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/51i1qRXkfWL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/41bA93NE2nL._AC_SY625_.jpg"]' data-title="Naturalizer Women&#39;s Flexy Round Toe Ballet Flat">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/81d6SzhGsGL._AC_SX625_.jpg"
+            alt="Naturalizer Women&#39;s Flexy Round Toe Ballet Flat in shoes category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>Naturalizer Women&#39;s Flexy Round Toe Ballet Flat</p>
+        <p class="category">Category: shoes</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> Classic, everyday women&#39;s ballet flat with a soft, padded collar for all day comfort</p>
+        <a href="https://amzn.to/3ENMgpq" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/7156F1HU8aL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/71+lp1Zau9L._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/71YrEzHBgSL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/81rD3OSLbSL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/812wVVpeZJL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/61vvVYRyA1L._AC_SY625_.jpg"]' data-title="Hash Bubbie Women&#39;s Flats Shoes Ballet Flats Dress Shoes Comfortable PU Leather Slip on Shoes for Women">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/7156F1HU8aL._AC_SY625_.jpg"
+            alt="Hash Bubbie Women&#39;s Flats Shoes Ballet Flats Dress Shoes Comfortable PU Leather Slip on Shoes for Women in shoes category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>Hash Bubbie Women&#39;s Flats Shoes Ballet Flats Dress Shoes Comfortable PU Leather Slip on Shoes for Women</p>
+        <p class="category">Category: shoes</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This shoe is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/44Lh7xw" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/6149eKK8OcL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/61giZlEzkUL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/51CmNv0B2eL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/61kPauOPAsL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/515VWWaqJ0L._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/81M0aeHhBoL._AC_SY625_.jpg"]' data-title="Ankis Closed Toe Heels for Women -Black Nude Gold Silver Pointed Toe Heels Low Block Chunky Women Pumps with Ankle Strap -2.25 Inch">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/6149eKK8OcL._AC_SY625_.jpg"
+            alt="Ankis Closed Toe Heels for Women -Black Nude Gold Silver Pointed Toe Heels Low Block Chunky Women Pumps with Ankle Strap -2.25 Inch in shoes category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>Ankis Closed Toe Heels for Women -Black Nude Gold Silver Pointed Toe Heels Low Block Chunky Women Pumps with Ankle Strap -2.25 Inch</p>
+        <p class="category">Category: shoes</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This shoe is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/3ECfFTC" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/61-uyP-wjAL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/61YDEPDn3xL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/61dJm5vR3gL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/51uV5Ddbc1L._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/51DzQCY22cL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/61Pv2bMNfkL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/61j-bBkvJAL._AC_SY625_.jpg"]' data-title="High Heels.Chunky Heel Pointed Closed Toe Pump Shoes,Party Wedding Fashion Shoes,Gifts for Women">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/61-uyP-wjAL._AC_SY625_.jpg"
+            alt="High Heels.Chunky Heel Pointed Closed Toe Pump Shoes,Party Wedding Fashion Shoes,Gifts for Women in shoes category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>High Heels.Chunky Heel Pointed Closed Toe Pump Shoes,Party Wedding Fashion Shoes,Gifts for Women</p>
+        <p class="category">Category: shoes</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This shoe is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/3RBPoru" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/71xq8CSci1L._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/71Bfp1wis0L._AC_SY695_.jpg", "https://c.media-amazon.com/images/I/615n5x5cnaL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/61Kzs55CX1L._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/71TNcMI9zIL._AC_SY625_.jpg"]' data-title="Coutgo Womens Ankle Strap High Heels Open Toe Stiletto Bow Tie Knot Heeled Sandals Fashion Wedding Dress Pump Shoes">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/71xq8CSci1L._AC_SY625_.jpg"
+            alt="Coutgo Womens Ankle Strap High Heels Open Toe Stiletto Bow Tie Knot Heeled Sandals Fashion Wedding Dress Pump Shoes in shoes category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>Coutgo Womens Ankle Strap High Heels Open Toe Stiletto Bow Tie Knot Heeled Sandals Fashion Wedding Dress Pump Shoes</p>
+        <p class="category">Category: shoes</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This shoe is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/3EAyLJR" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/61qlq2CAbYL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/613BM9vjJUL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/61j+fqrAswL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/71yn1Y7iqjL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/61foOPnUvNL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/51k6yjGGePL._AC_SY625_.jpg"]' data-title="Dsevht Black Kitten Heels for Women Closed Pointed Toe Heel Dressy Bow Vintage Heeled Pumps Ankle Strap Party Wedding Sexy Shoes">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/61qlq2CAbYL._AC_SY625_.jpg"
+            alt="Dsevht Black Kitten Heels for Women Closed Pointed Toe Heel Dressy Bow Vintage Heeled Pumps Ankle Strap Party Wedding Sexy Shoes in shoes category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>Dsevht Black Kitten Heels for Women Closed Pointed Toe Heel Dressy Bow Vintage Heeled Pumps Ankle Strap Party Wedding Sexy Shoes</p>
+        <p class="category">Category: shoes</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This shoe is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/3RXneHH" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/71bLOY6nfZL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/71WEwY4yt3L._AC_SY695_.jpg", "https://c.media-amazon.com/images/I/71vSnEr8ieL._AC_SY695_.jpg", "https://c.media-amazon.com/images/I/71+-PMivdjL._AC_SY695_.jpg", "https://c.media-amazon.com/images/I/61W+vhr11wL._AC_SY625_.jpg"]' data-title="LAICIGO Women&#39;s Pointed Toe Pumps Ankle Strap Buckle Chunky Block Heel Dress D&#39;Orsay Shoes">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/71bLOY6nfZL._AC_SY625_.jpg"
+            alt="LAICIGO Women&#39;s Pointed Toe Pumps Ankle Strap Buckle Chunky Block Heel Dress D&#39;Orsay Shoes in shoes category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>LAICIGO Women&#39;s Pointed Toe Pumps Ankle Strap Buckle Chunky Block Heel Dress D&#39;Orsay Shoes</p>
+        <p class="category">Category: shoes</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This shoe is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/4jUc2Yg" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/61y+jVQY3QL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/51uFIxdoh3L._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/51quR6VItKL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/51QLBZWLxpL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/61vA0IX4HCL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/518eJlZcDDL._AC_SY625_.jpg"]' data-title="DREAM PAIRS Women&#39;s Low Heel Pump Shoes">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/61y+jVQY3QL._AC_SY625_.jpg"
+            alt="DREAM PAIRS Women&#39;s Low Heel Pump Shoes in shoes category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>DREAM PAIRS Women&#39;s Low Heel Pump Shoes</p>
+        <p class="category">Category: shoes</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This shoe is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/3Yh8iYl" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/71Ini2O7ubS._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/81UH1clUjNS._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/71iIylnNHHS._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/61dytS30BIS._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/71Pt5JEZpdS._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/71ztpnY2etS._AC_SY625_.jpg"]' data-title="IDIFU Women&#39;s IN2 Pedazo Dress Shoes Low Block Heels Comfortable Chunky Closed Toe Ankle Strap Wedding Pumps">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/71Ini2O7ubS._AC_SY625_.jpg"
+            alt="IDIFU Women&#39;s IN2 Pedazo Dress Shoes Low Block Heels Comfortable Chunky Closed Toe Ankle Strap Wedding Pumps in shoes category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>IDIFU Women&#39;s IN2 Pedazo Dress Shoes Low Block Heels Comfortable Chunky Closed Toe Ankle Strap Wedding Pumps</p>
+        <p class="category">Category: shoes</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This shoe is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/4lKOIOp" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/61ViDpONcuL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/61FURm8t5YL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/61HeQd1o7iL._AC_SY500_.jpg", "https://c.media-amazon.com/images/I/614kNfu7MSL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/61RD-fQYHfL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/617UKZWqKGL._AC_SY625_.jpg"]' data-title="DREAM PAIRS Women&#39;s Closed Pointed Toe Low Chunky Heels Pumps Ankle Strap Wedding Business Dressy Shoes">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/61ViDpONcuL._AC_SY625_.jpg"
+            alt="DREAM PAIRS Women&#39;s Closed Pointed Toe Low Chunky Heels Pumps Ankle Strap Wedding Business Dressy Shoes in shoes category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>DREAM PAIRS Women&#39;s Closed Pointed Toe Low Chunky Heels Pumps Ankle Strap Wedding Business Dressy Shoes</p>
+        <p class="category">Category: shoes</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This shoe is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/3REwPmq" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/61wVjWL8eZL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/61iN5c90HxL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/71XkH5MBivL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/71LyDHWCCrL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/71vk5Mpd37L._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/61wVjWL8eZL._AC_SY625_.jpg"]' data-title="Trary Women&#39;s Flats, Black Flats for Women, Wide Width Dress Shoes for Women, Womens Flats, Pointed Toe Flats Ballet Flats for Women, Flats Shoes Women Dressy, Ankle Strap Flats,Closed Toe Flats,Flats">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/61wVjWL8eZL._AC_SY625_.jpg"
+            alt="Trary Women&#39;s Flats, Black Flats for Women, Wide Width Dress Shoes for Women, Womens Flats, Pointed Toe Flats Ballet Flats for Women, Flats Shoes Women Dressy, Ankle Strap Flats,Closed Toe Flats,Flats in shoes category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>Trary Women&#39;s Flats, Black Flats for Women, Wide Width Dress Shoes for Women, Womens Flats, Pointed Toe Flats Ballet Flats for Women, Flats Shoes Women Dressy, Ankle Strap Flats,Closed Toe Flats,Flats</p>
+        <p class="category">Category: shoes</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This shoe is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/44ewyOI" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+      <li data-images='["https://c.media-amazon.com/images/I/71E78GG4LBL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/519tSmkBrsL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/61k4bev2pbL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/71a7XgighCL._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/71-zb0gLo9L._AC_SY625_.jpg", "https://c.media-amazon.com/images/I/71upi6Mh1TL._AC_SY625_.jpg"]' data-title="Frank Mully Women’s Ballet Flat Shoes Knit Dress Shoes Round Toe Slip On Ballerina Walking Flats Shoes for Woman Low Wedge Comfort Soft">
+        <div class="product-images">
+          
+          <img src="https://c.media-amazon.com/images/I/71E78GG4LBL._AC_SY625_.jpg"
+            alt="Frank Mully Women’s Ballet Flat Shoes Knit Dress Shoes Round Toe Slip On Ballerina Walking Flats Shoes for Woman Low Wedge Comfort Soft in shoes category for Summer 2025" loading="lazy">
+          
+        </div>
+        <p>Frank Mully Women’s Ballet Flat Shoes Knit Dress Shoes Round Toe Slip On Ballerina Walking Flats Shoes for Woman Low Wedge Comfort Soft</p>
+        <p class="category">Category: shoes</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> This shoe is a top pick for Summer 2025, perfect for a stylish seasonal look.</p>
+        <a href="https://amzn.to/3SaF0ac" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  
+
+  <!-- Empty Message if No Products -->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <p>New products coming soon</p>
+  
+
+  <!-- Modal Window -->
+  <div id="modal" onclick="closeModal(event)">
+    <div class="splide" id="modalSplide">
+      <div class="splide__track">
+        <ul class="splide__list" id="modalSlides"></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to Top" aria-label="Back to Top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7"></path>
+    </svg>
+  </button>
 
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      
-      new Splide('#splide-1', {
-        type: 'loop',
-        perPage: 1,
-        pagination: false,
-        arrows: true,
-        height: 'auto',
-      }).mount();
-      
+    let modalSplideInstance = null;
 
-      const searchInput = document.getElementById('searchInput');
-      const items = document.querySelectorAll('#productList li');
-      searchInput.addEventListener('input', function () {
-        const query = this.value.toLowerCase();
-        items.forEach(item => {
-          const text = item.querySelector('p').textContent.toLowerCase();
-          item.style.display = text.includes(query) ? 'block' : 'none';
-        });
+    // Open Modal on Image Click
+    document.querySelectorAll('.product-images img').forEach(img => {
+      img.addEventListener('click', function (event) {
+        event.stopPropagation();
+        const li = this.closest('li');
+        if (!li) {
+          console.error('Could not find <li> element');
+          return;
+        }
+
+        const imagesAttr = li.getAttribute('data-images');
+        if (!imagesAttr) {
+          console.error('data-images attribute not found');
+          return;
+        }
+
+        let images;
+        try {
+          images = JSON.parse(imagesAttr);
+        } catch (e) {
+          console.error('Error parsing data-images:', e);
+          return;
+        }
+
+        console.log('Images for modal:', images);
+        openModal(images);
       });
     });
 
-    function openModal(src) {
+    // Modal Logic
+    function openModal(images) {
+      console.log('Opening modal with images:', images);
       const modal = document.getElementById("modal");
-      const modalImg = document.getElementById("modalImage");
+      const modalSlides = document.getElementById("modalSlides");
+
+      if (!modal || !modalSlides) {
+        console.error('Could not find modal or modalSlides elements');
+        return;
+      }
+
+      modalSlides.innerHTML = '';
+
+      if (!images || images.length === 0) {
+        const li = document.createElement('li');
+        li.className = 'splide__slide';
+        li.textContent = 'No images available';
+        modalSlides.appendChild(li);
+      } else {
+        images.forEach(imgSrc => {
+          const li = document.createElement('li');
+          li.className = 'splide__slide';
+          const img = document.createElement('img');
+          img.src = imgSrc;
+          img.alt = 'Product image';
+          img.onerror = () => console.error('Error loading image:', imgSrc);
+          li.appendChild(img);
+          modalSlides.appendChild(li);
+        });
+      }
+
+      if (modalSplideInstance) {
+        modalSplideInstance.destroy();
+      }
+
+      try {
+        modalSplideInstance = new Splide('#modalSplide', {
+          type: 'loop',
+          perPage: 1,
+          arrows: true,
+          pagination: true,
+          focus: 'center',
+          speed: 600,
+        });
+        modalSplideInstance.mount();
+      } catch (e) {
+        console.error('Error initializing Splide:', e);
+        return;
+      }
+
       modal.style.display = "flex";
-      modalImg.src = src;
+      modal.classList.add('show');
     }
 
-    function closeModal() {
-      document.getElementById("modal").style.display = "none";
+    function closeModal(event) {
+      if (event.target.id === "modal") {
+        console.log('Closing modal');
+        const modal = document.getElementById("modal");
+        modal.classList.remove('show');
+        setTimeout(() => {
+          modal.style.display = "none";
+          if (modalSplideInstance) {
+            modalSplideInstance.destroy();
+            modalSplideInstance = null;
+          }
+        }, 300);
+      }
     }
+
+    // Tab Logic
+    document.querySelectorAll('.tab-button').forEach(button => {
+      button.addEventListener('click', function () {
+        const tabName = this.getAttribute('data-tab');
+
+        document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+        this.classList.add('active');
+        document.getElementById(tabName).classList.add('active');
+
+        document.getElementById('searchInput').value = '';
+        document.getElementById('sortSelect').value = 'default';
+        const activeTab = document.querySelector('.tab-content.active');
+        if (activeTab) {
+          const items = activeTab.querySelectorAll('.product-list li');
+          items.forEach(item => item.style.display = 'block');
+          sortProducts('default');
+        }
+      });
+    });
+
+    // Search
+    document.getElementById('searchInput').addEventListener('input', function () {
+      const query = this.value.toLowerCase();
+      const activeTab = document.querySelector('.tab-content.active');
+      if (!activeTab) return;
+
+      const items = activeTab.querySelectorAll('.product-list li');
+      items.forEach(item => {
+        const text = item.querySelector('p').textContent.toLowerCase();
+        item.style.display = text.includes(query) ? 'block' : 'none';
+      });
+    });
+
+    // Sorting
+    function sortProducts(sortType) {
+      const activeTab = document.querySelector('.tab-content.active');
+      if (!activeTab) return;
+
+      const productList = activeTab.querySelector('.product-list');
+      const items = Array.from(productList.querySelectorAll('li'));
+
+      if (sortType === 'title-asc') {
+        items.sort((a, b) => a.getAttribute('data-title').localeCompare(b.getAttribute('data-title')));
+      } else if (sortType === 'title-desc') {
+        items.sort((a, b) => b.getAttribute('data-title').localeCompare(a.getAttribute('data-title')));
+      }
+
+      productList.innerHTML = '';
+      items.forEach(item => productList.appendChild(item));
+    }
+
+    document.getElementById('sortSelect').addEventListener('change', function () {
+      sortProducts(this.value);
+    });
+
+    // Show First Tab by Default
+    if (document.querySelector('.tab-button')) {
+      document.querySelector('.tab-button').click();
+    }
+
+    // Back to Top Button
+    const backToTopButton = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    });
+
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   </script>
 </body>
 
