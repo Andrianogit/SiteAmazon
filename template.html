@@ -2,12 +2,39 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home and Kitchen</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WOMWEARS | Designer-Curated Fashion for Summer 2025</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Designer-curated women's fashion for Summer 2025. Explore stylish dresses, tops, and shoes from Amazon with WOMWEARS.">
+  <meta name="keywords" content="women's fashion 2025, summer dresses, designer picks, Amazon fashion, WOMWEARS">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="WOMWEARS">
+  <!-- Open Graph Tags for Social Media -->
+  <meta property="og:title" content="WOMWEARS | Designer-Curated Fashion for Summer 2025">
+  <meta property="og:description"
+    content="Designer-curated women's fashion for Summer 2025. Explore stylish dresses, tops, and shoes from Amazon with WOMWEARS.">
+  <meta property="og:image" content="https://womwears.netlify.app/images/logo.jpg">
+  <meta property="og:url" content="https://womwears.netlify.app">
+  <meta property="og:type" content="website">
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="WOMWEARS | Designer-Curated Fashion for Summer 2025">
+  <meta name="twitter:description"
+    content="Designer-curated women's fashion for Summer 2025. Explore stylish dresses, tops, and shoes from Amazon with WOMWEARS.">
+  <meta name="twitter:image" content="https://womwears.netlify.app/images/logo.jpg">
+  <!-- Google Tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYM3PQKGJL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-CYM3PQKGJL');
+  </script>
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Montserrat:wght@400;600&display=swap"
-    rel="stylesheet" />
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
   <style>
     * {
@@ -19,7 +46,6 @@
     body {
       font-family: 'Montserrat', sans-serif;
       background: #fff6f9;
-      color: #444;
       padding: 20px;
     }
 
@@ -31,9 +57,8 @@
     header h1 {
       font-family: 'Playfair Display', serif;
       font-size: 3rem;
-      color: #6b8e23;
+      color: #e91e63;
       margin-bottom: 15px;
-      letter-spacing: 1px;
     }
 
     #searchInput {
@@ -43,18 +68,66 @@
       max-width: 400px;
       margin: 0 auto;
       display: block;
-      border: 2px solid #c0f8bb;
+      border: 2px solid #f8bbd0;
       border-radius: 30px;
-      outline: none;
-      transition: 0.3s ease;
     }
 
-    #searchInput:focus {
-      border-color: #6b8e23;
-      box-shadow: 0 0 8px rgba(107, 142, 35, 0.2);
+    /* Summer Banner Styles */
+    .summer-banner {
+      background-color: #f7e4bc;
+      color: #333;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 20px;
     }
 
-    ul#productList {
+    /* Why Choose Us Section Styles */
+    .why-choose-us {
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    /* Styles for Tabs */
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .tab-button {
+      padding: 10px 20px;
+      margin: 5px;
+      background: #fce4ec;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: capitalize;
+      transition: background 0.3s;
+    }
+
+    .tab-button:hover {
+      background: #f48fb1;
+    }
+
+    .tab-button.active {
+      background: #f06292;
+    }
+
+    /* Styles for Products */
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    ul.product-list {
       list-style: none;
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -62,155 +135,445 @@
       margin-top: 30px;
     }
 
-    ul#productList li {
-      background: #ffffff;
+    ul.product-list li {
+      background: #fff;
       border-radius: 18px;
       box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
       padding: 16px;
-      transition: all 0.3s ease;
     }
 
-    ul#productList li:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 20px rgba(233, 30, 99, 0.2);
-    }
-
-    ul#productList img {
+    ul.product-list img {
       width: 100%;
-      height: 741px;
-      object-fit: contain;
+      height: 400px;
+      object-fit: cover;
       border-radius: 12px;
-      background-color: #fff;
-      display: block;
-      margin: 0 auto;
+      background: #fff;
       cursor: pointer;
     }
 
-    ul#productList p {
+    ul.product-list p {
       font-weight: 600;
       font-size: 16px;
       margin: 15px 0 10px;
-      color: #4e6e0e;
+      color: #c2185b;
     }
 
-    ul#productList a {
-      color: #6b8e23;
+    ul.product-list p.designer-note {
+      font-style: italic;
+      color: #666;
+      font-weight: 400;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    ul.product-list p.designer-note strong {
+      color: #e91e63;
+    }
+
+    ul.product-list a {
+      color: #ec407a;
       text-decoration: none;
-      font-weight: 500;
-      display: inline-block;
-      margin-top: 5px;
     }
 
-    ul#productList a:hover {
-      text-decoration: underline;
+    .category {
+      font-size: 14px;
+      color: #999;
+      margin-top: 8px;
+      font-weight: 600;
     }
 
-    /* Убираем точки карусели */
-    .splide__pagination {
-      display: none !important;
+    /* Sorting */
+    .sort-container {
+      text-align: center;
+      margin-bottom: 20px;
     }
 
-    /* Модальное окно */
+    #sortSelect {
+      padding: 8px 16px;
+      font-size: 16px;
+      border-radius: 20px;
+      border: 2px solid #f8bbd0;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    /* Modal Window */
     #modal {
       display: none;
       position: fixed;
-      z-index: 999;
-      left: 0;
       top: 0;
+      left: 0;
       width: 100vw;
       height: 100vh;
       background: rgba(0, 0, 0, 0.8);
       justify-content: center;
       align-items: center;
+      z-index: 9999;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    #modal.show {
+      opacity: 1;
+    }
+
+    #modal .splide {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.9);
+      width: 80%;
+      max-width: 700px;
+      max-height: 80vh;
+      transition: transform 0.3s ease;
+    }
+
+    #modal.show .splide {
+      transform: translate(-50%, -50%) scale(1);
     }
 
     #modal img {
-      max-width: 90%;
-      max-height: 90%;
+      width: 100%;
+      height: auto;
       border-radius: 10px;
     }
 
+    /* Back to Top Button */
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #e91e63;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 1000;
+    }
+
+    #backToTop.visible {
+      opacity: 1;
+    }
+
+    #backToTop:hover {
+      background: #f06292;
+    }
+
+    /* Responsiveness */
     @media screen and (max-width: 600px) {
       header h1 {
         font-size: 2rem;
       }
 
-      ul#productList {
+      ul.product-list {
         grid-template-columns: 1fr;
       }
 
-      ul#productList img {
-        height: auto;
-        max-height: 500px;
+      ul.product-list img {
+        height: 300px;
+      }
+
+      #modal .splide {
+        width: 90%;
+        max-height: 70vh;
+      }
+
+      .tab-button {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+
+      #backToTop {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 20px;
       }
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <h1>Home and Kitchen</h1>
-    <input type="text" id="searchInput" placeholder="Search for products...">
-  </header>
-  <ul id="productList">
-    {% for product in products %}
-    <li>
-      <div class="splide" id="splide-{{ loop.index }}">
-        <div class="splide__track">
-          <ul class="splide__list">
-            {% for image in product.images %}
-            <li class="splide__slide">
-              <img src="{{ image }}" alt="{{ product.title }}" onclick="openModal(this.src)">
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
-      <p>{{ product.title }}</p>
-      <a href="{{ product.link }}" target="_blank">Buy on Amazon</a>
-    </li>
-    {% endfor %}
-  </ul>
-
-  <!-- Модалка -->
-  <div id="modal" onclick="closeModal()">
-    <img id="modalImage" src="" alt="Modal image">
+  <!-- Summer 2025 Banner -->
+  <div class="summer-banner">
+    <h1>Summer 2025: Designer-Curated Women's Fashion</h1>
+    <p>WOMWEARS brings you the best dresses, tops, cardigans, and shoes from Amazon, handpicked by our designer for the
+      modern woman.</p>
   </div>
+
+  <header>
+    <a href="/" style="text-decoration: none;">
+      <img src="/images/logo.png" alt="WOMWEARS Logo" style="max-width: 150px; margin-bottom: 15px;" loading="lazy">
+    </a>
+    <p>Designer-Curated Fashion for Summer 2025</p>
+    <input type="text" id="searchInput" placeholder="Search products..." aria-label="Search products">
+  </header>
+
+  <!-- Why Choose Us Section -->
+  <div class="why-choose-us">
+    <h2>Why Choose WOMWEARS?</h2>
+    <p>Our collections are curated by a professional designer who follows the latest 2025 trends. We select only the
+      best pieces from Amazon to ensure you look stylish and feel confident this summer.</p>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    {% for category in products.keys() %}
+    {% if products[category] %}
+    <button class="tab-button" data-tab="{{ category }}">{{ category }}</button>
+    {% endif %}
+    {% endfor %}
+  </div>
+
+  <!-- Sorting -->
+  <div class="sort-container">
+    <select id="sortSelect" aria-label="Sort products">
+      <option value="default">Sort by: Default</option>
+      <option value="title-asc">Sort by Title (A-Z)</option>
+      <option value="title-desc">Sort by Title (Z-A)</option>
+    </select>
+  </div>
+
+  <!-- Tab Content -->
+  {% for category, items in products.items() %}
+  {% if items %}
+  <div class="tab-content" id="{{ category }}">
+    <h2>Summer 2025 {{ category | capitalize }}: Designer's Picks</h2>
+    <ul class="product-list">
+      {% for product in items %}
+      <li data-images='{{ product.images | tojson | e }}' data-title="{{ product.title | e }}">
+        <div class="product-images">
+          {% if product.images %}
+          <img src="{{ product.images[0] | e }}"
+            alt="{{ product.title | e }} in {{ category | e }} category for Summer 2025" loading="lazy">
+          {% else %}
+          <p>No image available</p>
+          {% endif %}
+        </div>
+        <p>{{ product.title | e }}</p>
+        <p class="category">Category: {{ category | e }}</p>
+        <p class="designer-note"><strong>Designer's Note:</strong> {{ product.designer_note | default("This " +
+          (category[:-1] | e) + " is a top pick for Summer 2025, perfect for a stylish seasonal look.") | e }}</p>
+        <a href="{{ product.link | e }}" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  {% endfor %}
+
+  <!-- Empty Message if No Products -->
+  {% set has_products = false %}
+  {% for category, items in products.items() %}
+  {% if items %}
+  {% set has_products = true %}
+  {% endif %}
+  {% endfor %}
+  {% if not products or not has_products %}
+  <p>New products coming soon</p>
+  {% endif %}
+
+  <!-- Modal Window -->
+  <div id="modal" onclick="closeModal(event)">
+    <div class="splide" id="modalSplide">
+      <div class="splide__track">
+        <ul class="splide__list" id="modalSlides"></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to Top" aria-label="Back to Top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7"></path>
+    </svg>
+  </button>
 
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      {% for product in products %}
-      new Splide('#splide-{{ loop.index }}', {
-        type: 'loop',
-        perPage: 1,
-        pagination: false,
-        arrows: true,
-        height: 'auto',
-      }).mount();
-      {% endfor %}
+    let modalSplideInstance = null;
 
-      const searchInput = document.getElementById('searchInput');
-      const items = document.querySelectorAll('#productList li');
-      searchInput.addEventListener('input', function () {
-        const query = this.value.toLowerCase();
-        items.forEach(item => {
-          const text = item.querySelector('p').textContent.toLowerCase();
-          item.style.display = text.includes(query) ? 'block' : 'none';
-        });
+    // Open Modal on Image Click
+    document.querySelectorAll('.product-images img').forEach(img => {
+      img.addEventListener('click', function (event) {
+        event.stopPropagation();
+        const li = this.closest('li');
+        if (!li) {
+          console.error('Could not find <li> element');
+          return;
+        }
+
+        const imagesAttr = li.getAttribute('data-images');
+        if (!imagesAttr) {
+          console.error('data-images attribute not found');
+          return;
+        }
+
+        let images;
+        try {
+          images = JSON.parse(imagesAttr);
+        } catch (e) {
+          console.error('Error parsing data-images:', e);
+          return;
+        }
+
+        console.log('Images for modal:', images);
+        openModal(images);
       });
     });
 
-    function openModal(src) {
+    // Modal Logic
+    function openModal(images) {
+      console.log('Opening modal with images:', images);
       const modal = document.getElementById("modal");
-      const modalImg = document.getElementById("modalImage");
+      const modalSlides = document.getElementById("modalSlides");
+
+      if (!modal || !modalSlides) {
+        console.error('Could not find modal or modalSlides elements');
+        return;
+      }
+
+      modalSlides.innerHTML = '';
+
+      if (!images || images.length === 0) {
+        const li = document.createElement('li');
+        li.className = 'splide__slide';
+        li.textContent = 'No images available';
+        modalSlides.appendChild(li);
+      } else {
+        images.forEach(imgSrc => {
+          const li = document.createElement('li');
+          li.className = 'splide__slide';
+          const img = document.createElement('img');
+          img.src = imgSrc;
+          img.alt = 'Product image';
+          img.onerror = () => console.error('Error loading image:', imgSrc);
+          li.appendChild(img);
+          modalSlides.appendChild(li);
+        });
+      }
+
+      if (modalSplideInstance) {
+        modalSplideInstance.destroy();
+      }
+
+      try {
+        modalSplideInstance = new Splide('#modalSplide', {
+          type: 'loop',
+          perPage: 1,
+          arrows: true,
+          pagination: true,
+          focus: 'center',
+          speed: 600,
+        });
+        modalSplideInstance.mount();
+      } catch (e) {
+        console.error('Error initializing Splide:', e);
+        return;
+      }
+
       modal.style.display = "flex";
-      modalImg.src = src;
+      modal.classList.add('show');
     }
 
-    function closeModal() {
-      document.getElementById("modal").style.display = "none";
+    function closeModal(event) {
+      if (event.target.id === "modal") {
+        console.log('Closing modal');
+        const modal = document.getElementById("modal");
+        modal.classList.remove('show');
+        setTimeout(() => {
+          modal.style.display = "none";
+          if (modalSplideInstance) {
+            modalSplideInstance.destroy();
+            modalSplideInstance = null;
+          }
+        }, 300);
+      }
     }
+
+    // Tab Logic
+    document.querySelectorAll('.tab-button').forEach(button => {
+      button.addEventListener('click', function () {
+        const tabName = this.getAttribute('data-tab');
+
+        document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+        this.classList.add('active');
+        document.getElementById(tabName).classList.add('active');
+
+        document.getElementById('searchInput').value = '';
+        document.getElementById('sortSelect').value = 'default';
+        const activeTab = document.querySelector('.tab-content.active');
+        if (activeTab) {
+          const items = activeTab.querySelectorAll('.product-list li');
+          items.forEach(item => item.style.display = 'block');
+          sortProducts('default');
+        }
+      });
+    });
+
+    // Search
+    document.getElementById('searchInput').addEventListener('input', function () {
+      const query = this.value.toLowerCase();
+      const activeTab = document.querySelector('.tab-content.active');
+      if (!activeTab) return;
+
+      const items = activeTab.querySelectorAll('.product-list li');
+      items.forEach(item => {
+        const text = item.querySelector('p').textContent.toLowerCase();
+        item.style.display = text.includes(query) ? 'block' : 'none';
+      });
+    });
+
+    // Sorting
+    function sortProducts(sortType) {
+      const activeTab = document.querySelector('.tab-content.active');
+      if (!activeTab) return;
+
+      const productList = activeTab.querySelector('.product-list');
+      const items = Array.from(productList.querySelectorAll('li'));
+
+      if (sortType === 'title-asc') {
+        items.sort((a, b) => a.getAttribute('data-title').localeCompare(b.getAttribute('data-title')));
+      } else if (sortType === 'title-desc') {
+        items.sort((a, b) => b.getAttribute('data-title').localeCompare(a.getAttribute('data-title')));
+      }
+
+      productList.innerHTML = '';
+      items.forEach(item => productList.appendChild(item));
+    }
+
+    document.getElementById('sortSelect').addEventListener('change', function () {
+      sortProducts(this.value);
+    });
+
+    // Show First Tab by Default
+    if (document.querySelector('.tab-button')) {
+      document.querySelector('.tab-button').click();
+    }
+
+    // Back to Top Button
+    const backToTopButton = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    });
+
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   </script>
 </body>
 
