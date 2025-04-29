@@ -1,11 +1,520 @@
-[
-    {
-        "title": "Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel",
-        "images": [
-            "https://f.media-amazon.com/images/I/810-Z1ODvpL._SX425_.jpg",
-            "https://f.media-amazon.com/images/I/81ValwUwqtL._SX425_.jpg",
-            "https://f.media-amazon.com/images/I/81vtR03L33L._SX425_.jpg"
-        ],
-        "link": "https://amzn.to/42D7kbC"
-    }
-]
+﻿{
+    "dresses": [
+        {
+            "title": "ANRABESS Womens Summer Casual Maxi Dress V Neck Ruffle Sleeve Long Dresses Fashion Flowy Tiered Boho Beach Vacation Sundress",
+            "images": [
+                "https://c.media-amazon.com/images/I/61+Mex6Ez9L._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/81IoIWiyb9L._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/81n7KbYPm-L._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/81gl2JUy0VL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/81yavvUqzhL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/810g1sTduyL._AC_SY741_.jpg"
+            ],
+            "link": "https://amzn.to/42PwZg3",
+            "category": "Dresses"
+        },
+        {
+            "title": "ANRILITA Maxi Dress for Women Wrap V Neck Short Sleeve Empire Pleated Waist Summer Casual Elegant Long Dresses with Pockets",
+            "images": [
+                "https://c.media-amazon.com/images/I/7152ibJCFuL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/71FPfIrCB2L._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/71XqyOgAJbL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/71XhGJYRwYL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/81lhDRcjFrL._AC_SY741_.jpg"
+            ],
+            "link": "https://amzn.to/4jwvlHa",
+            "category": "Dresses"
+        },
+        {
+            "title": "ZESICA Women's 2025 Summer Short Sleeve Maxi Dress Casual V Neck Hollow Out Eyelet Ruffle Swing A Line Long Dresses",
+            "images": [
+                "https://c.media-amazon.com/images/I/81zQf8MpjKL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/818eyMFGnYL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/81fEm3v3iYL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/813AcwckgCL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/81TWk-acRiL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/61eiu2HcxhL._AC_SX569_.jpg"
+            ],
+            "link": "https://amzn.to/42JMXIq",
+            "category": "Dresses"
+        },
+        {
+            "title": "Womens Casual Tiered Swing Midi Dress Ruffle Sleeve V Neck A Line Loose Summer Dresses with Pockets",
+            "images": [
+                "https://c.media-amazon.com/images/I/81ye5uq2TeL._AC_SX679_.jpg",
+                "https://c.media-amazon.com/images/I/81qnESMH3yL._AC_SX679_.jpg",
+                "https://c.media-amazon.com/images/I/91XgM9nfzcL._AC_SX679_.jpg",
+                "https://c.media-amazon.com/images/I/81PXnSsJO8L._AC_SX679_.jpg"
+            ],
+            "link": "https://amzn.to/445HLRu",
+            "category": "Dresses"
+        },
+        {
+            "title": "Berydress Women's Casual Summer Tiered Midi Dress 2025 Short Sleeve V-Neck Loose Cotton Ruffle Babydoll Dress Boho Sundress",
+            "images": [
+                "https://c.media-amazon.com/images/I/81cd55eSqbL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/81fPmNtzKNL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/718+4seNS3L._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/71DDJxfgJXL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/71OFokdZgIL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/71VPrjPTXqL._AC_SY741_.jpg"
+            ],
+            "link": "https://amzn.to/42sLKX5",
+            "category": "Dresses"
+        },
+        {
+            "title": "Berydress Women's Smocked Wrap Dress 2025 Square Neck Short Sleeve Sundress Summer Floral Ruffle Beach Mini Dresses",
+            "images": [
+                "https://c.media-amazon.com/images/I/71n-Z0QySTL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/71u+2UNLpSL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/71KEZMNGoiL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/71tAJeaB+uL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/71WzPuW7EWL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/712lc96AYPL._AC_SY741_.jpg"
+            ],
+            "link": "https://amzn.to/4cPuJde",
+            "category": "Dresses"
+        },
+        {
+            "title": "Womens Summer Dress- Square Neck Puff Sleeve Smocked Ruffle Hem A-line Mini Short Dresses",
+            "images": [
+                "https://c.media-amazon.com/images/I/719Ip8bwihL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/61d3a7ozP0L._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/61C+a-7KUTL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/71ROrVgTjSL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/61A4DR7FojL._AC_SY741_.jpg"
+            ],
+            "link": "https://amzn.to/3EFd4rV",
+            "category": "Dresses"
+        },
+        {
+            "title": "Women Puff Sleeve Square Neck Tie in Back Dresses with Zipper",
+            "images": [
+                "https://c.media-amazon.com/images/I/71VQkKBT54L._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/81IsR+iro-L._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/71Z7pQR9SyL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/71cfMdxfp5L._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/71Yh7HB+AIL._AC_SY741_.jpg"
+            ],
+            "link": "https://amzn.to/3Ey8qvX",
+            "category": "Dresses"
+        },
+        {
+            "title": "ANRABESS Women's Summer Casual Sleeveless Square Neck Dress 2025 Smocked Ruffle Backless Boho Beach Cute Teen Short Sundress",
+            "images": [
+                "https://c.media-amazon.com/images/I/71nSZpmXtoL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/71lreVhy70L._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/61j2tHNGjpL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/61n7W5BUheL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/613xXxls3eL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/71dUiGZo+IL._AC_SY741_.jpg"
+            ],
+            "link": "https://amzn.to/3YcTY3a",
+            "category": "Dresses"
+        }
+    ],
+    "tops": [
+        {
+            "title": "U.Vomade Women's 3/4 Sleeve Plus Size Tops Collared V Neck Casual Comfy Work Blouses L-4X",
+            "images": [
+                "https://c.media-amazon.com/images/I/91jzyXNGZmL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/81eJm6LRmvL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/81ZafvGSv2L._AC_SX569_.jpg"
+            ],
+            "link": "https://amzn.to/4lRzHdI",
+            "category": "Tops"
+        },
+        {
+            "title": "Zeagoo Womens 3/4 Length Sleeve Tunic Tops Casual V Neck Shirts Basic Tees Business Work Blouses Summer Fall 2025 Clothes",
+            "images": [
+                "https://c.media-amazon.com/images/I/81Rlk63IcNL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/71BD4VRL5TL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/81zvSMdphOL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/71lADb+M9sL._AC_SY741_.jpg"
+            ],
+            "link": "https://amzn.to/4itJAer",
+            "category": "Tops"
+        },
+        {
+            "title": "LUYAA 3/4 Length Sleeve Womens Tops V Neck Tunic Tops Dressy Casual Pleated Shirts Fashion Tops for Women Trendy",
+            "images": [
+                "https://c.media-amazon.com/images/I/81R0I3wZd2L._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/81bVJdlKxZL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/81xkAE38e5L._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/81sN-NTLtOL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/718dT-rwq9L._AC_SX569_.jpg"
+            ],
+            "link": "https://amzn.to/4cN14kH",
+            "category": "Tops"
+        },
+        {
+            "title": "3/4 Length Sleeve Womens Tops Summer Ruffle Sleeve Blouses V-Neck Lace T-Shirts Dressy Casual",
+            "images": [
+                "https://c.media-amazon.com/images/I/91Xg7vutGVL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/81dSzXK2d5L._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/81Q2-mmflcL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/91VVBUYJkOL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/91dTlwoW2AL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/71E73TgI79L._AC_SX569_.jpg"
+            ],
+            "link": "https://amzn.to/42LLrp6",
+            "category": "Tops"
+        },
+        {
+            "title": "Romanstii 3/4 Length Sleeve Womens Tops Keyhole Crewneck Shirts Business Dressy Casual Tunic Blouses Summer Basic Tees",
+            "images": [
+                "https://c.media-amazon.com/images/I/81R-sszi8sL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/81qkIof+ipL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/81X44PnelTL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/81YjZrzt87L._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/81o1zvjOyGL._AC_SX569_.jpg"
+            ],
+            "link": "https://amzn.to/3EEmROW",
+            "category": "Tops"
+        },
+        {
+            "title": "Cotton Linen Shirts for Women Summer Casual Crewneck Pullover Tops Comfy Loose Women's Short Sleeve T Shirt",
+            "images": [
+                "https://m.media-amazon.com/images/I/61-+Zumb32L._AC_SX679_.jpg",
+                "https://m.media-amazon.com/images/I/61hpDVpiIHL._AC_SX679_.jpg",
+                "https://m.media-amazon.com/images/I/61UUVoda4zL._AC_SX679_.jpg",
+                "https://m.media-amazon.com/images/I/71IggeiOJgL._AC_SX679_.jpg"
+            ],
+            "link": "https://amzn.to/3GmQmpe",
+            "category": "Tops"
+        },
+        {
+            "title": "ROSELINLIN Women's Short Sleeve Shirts Floral Summer Tops Loose Fit for Leggings",
+            "images": [
+                "https://m.media-amazon.com/images/I/81-5Hc2tHrL._AC_SY741_.jpg",
+                "https://m.media-amazon.com/images/I/81TkrfVWswL._AC_SY741_.jpg",
+                "https://m.media-amazon.com/images/I/71cmAYf53qL._AC_SY741_.jpg",
+                "https://m.media-amazon.com/images/I/81hfDLWl56L._AC_SY741_.jpg"
+            ],
+            "link": "https://amzn.to/3RYc7hk",
+            "category": "Tops"
+        },
+        {
+            "title": "ROSELINLIN Womens Long Sleeve Tunic Tops Floral Fall Blouse Shirts",
+            "images": [
+                "https://m.media-amazon.com/images/I/81oT3AT-4IL._AC_SY741_.jpg",
+                "https://m.media-amazon.com/images/I/81TzofTCOPL._AC_SY741_.jpg",
+                "https://m.media-amazon.com/images/I/71q9OxMIZ-L._AC_SY741_.jpg",
+                "https://m.media-amazon.com/images/I/81P3JZfhKrL._AC_SY741_.jpg"
+            ],
+            "link": "https://amzn.to/4lHaFO4",
+            "category": "Tops"
+        },
+        {
+            "title": "AKEWEI Womens Summer Tops V Neck T Shirts Pleated Clothes Spring Fashion Blouses",
+            "images": [
+                "https://m.media-amazon.com/images/I/91v0HJqUuwL._AC_SY500_.jpg",
+                "https://m.media-amazon.com/images/I/81LnBnbTEKL._AC_SY500_.jpg",
+                "https://m.media-amazon.com/images/I/81ZxlSy9D0L._AC_SY500_.jpg",
+                "https://m.media-amazon.com/images/I/81c2omwFewL._AC_SY500_.jpg",
+                "https://m.media-amazon.com/images/I/81WRGAoE4EL._AC_SY500_.jpg"
+            ],
+            "link": "https://amzn.to/42I0eRQ",
+            "category": "Tops"
+        },
+        {
+            "title": "Boho Floral Linen Shirt for Women V Neck Long Sleeve Blouse Vintage Printed Casual Loose Fit Fall Tunic Tops",
+            "images": [
+                "https://c.media-amazon.com/images/I/61WfO5R3KSL._AC_SX679_.jpg",
+                "https://c.media-amazon.com/images/I/61EoFrfY0DL._AC_SX679_.jpg",
+                "https://c.media-amazon.com/images/I/6168hRK6v7L._AC_SX679_.jpg",
+                "https://c.media-amazon.com/images/I/61s6nOLYE5L._AC_SX679_.jpg",
+                "https://c.media-amazon.com/images/I/61pMv8hR8qL._AC_SX679_.jpg"
+            ],
+            "link": "https://amzn.to/4jEmumm",
+            "category": "Tops"
+        },
+        {
+            "title": "Blooming Jelly Womens Dressy Casual Blouses 3/4 Sleeve V Neck Ruffle Tops Business Ladies Summer 2025 Trendy Work Shirt",
+            "images": [
+                "https://c.media-amazon.com/images/I/71jYPxijUeL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/81lpzQIMUwL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/71Kieqj8xbL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/81QJ-ljc0nL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/81s7mLfSU3L._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/81stOwh8EkL._AC_SX569_.jpg"
+            ],
+            "link": "https://amzn.to/3EATCMY",
+            "category": "Tops"
+        },
+        {
+            "title": "Bebonnie Women's Button Down Shirts Short Sleeve Dress Shirts Collared Work Office Blouses",
+            "images": [
+                "https://c.media-amazon.com/images/I/71Ob+Zkc11L._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/717yNbjTLeL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/71NJ97FY40L._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/7142JKtyixL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/712Fn3N6IJL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/71FCv0dfqAL._AC_SX569_.jpg"
+            ],
+            "link": "https://amzn.to/4jNXWYo",
+            "category": "Tops"
+        },
+        {
+            "title": "Womens Summer Tops Crewneck Short Sleeve Shirts Casual Chiffon Blouses Flowy Lace Hem Boho Clothing Trendy 2025",
+            "images": [
+                "https://c.media-amazon.com/images/I/71TtkME3P4L._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/71BtzcxyiBL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/71VwjorxUSL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/71DOIJ3KHEL._AC_SY741_.jpg"
+            ],
+            "link": "https://amzn.to/442I3IV",
+            "category": "Tops"
+        },
+        {
+            "title": "LOMON Women's 2025 Fashion Tops 3/4 Length Sleeve Business Casual Blouses Summer Tees Shirts",
+            "images": [
+                "https://c.media-amazon.com/images/I/91GpFxgIUeL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/81ap67x5VTL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/81iQgRkaC+L._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/811S9LmmUFL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/815KH7qGw7L._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/91ew9qutSaL._AC_SX569_.jpg"
+            ],
+            "link": "https://amzn.to/4iw84nt",
+            "category": "Tops"
+        },
+        {
+            "title": "Lotusmile Summer Chiffon Dressy Casual Blouses Elegant Ruffle Short Sleeve Work Tops for Women Trendy",
+            "images": [
+                "https://c.media-amazon.com/images/I/81EPDo0f4fL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/81vzOaTwOvL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/81OyM9xzRbL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/81Io2xJZUPL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/81ERnTEMEGL._AC_SX569_.jpg"
+            ],
+            "link": "https://amzn.to/4jFIcq0",
+            "category": "Tops"
+        },
+        {
+            "title": "Blingfit 3/4 Length Sleeve Shirts for Womens Pleated Summer Tops 2025 Ruffle Bell Sleeve Fasion Trendy Spring Blouses",
+            "images": [
+                "https://c.media-amazon.com/images/I/8191tlSoooL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/81lkl+hb07L._AC_SX679_.jpg",
+                "https://c.media-amazon.com/images/I/813HnW3sORL._AC_SX679_.jpg",
+                "https://c.media-amazon.com/images/I/819g27sdasL._AC_SX679_.jpg",
+                "https://c.media-amazon.com/images/I/81q7f6TKbHL._AC_SX679_.jpg"
+            ],
+            "link": "https://amzn.to/4jNdY4E",
+            "category": "Tops"
+        },
+        {
+            "title": "KTILG Women's V Neck T Shirts 3/4 Sleeve Blouse Summer Tops Dressy Casual Solid Basic Tees",
+            "images": [
+                "https://c.media-amazon.com/images/I/81KEuAzxzRL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/81Wem+TtO5L._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/81IBiu6s2yL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/81z8ob0mAWL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/81rDHCPs+BL._AC_SX569_.jpg"
+            ],
+            "link": "https://amzn.to/4iv1Tjy",
+            "category": "Tops"
+        }
+    ],
+    "cardigans": [
+        {
+            "title": "Amazon Essentials Women's Relaxed-Fit Lightweight Lounge Open-Front Cardigan",
+            "images": [
+                "https://c.media-amazon.com/images/I/71SNAwpQG9L._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/61rrcFVCIeL._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/71C968SRg7L._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/61ryQm12p-L._AC_SX569_.jpg",
+                "https://c.media-amazon.com/images/I/61Ij0nn31YL._AC_SX569_.jpg"
+            ],
+            "link": "https://amzn.to/3Gwjcna",
+            "category": "cardigans",
+            "designer_note": "RELAXED FIT: Relaxed, comfortable fit through the body."
+        },
+        {
+            "title": "ANRABESS Women Striped Cardigan Sweaters Button Down Cropped Knit Lady Jackets Coat 2025 Fall Outfits Spring Trendy Clothes",
+            "images": [
+                "https://c.media-amazon.com/images/I/619TYxjXh6L._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/711x-trqIiL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/71SXXyp0GzL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/71ibUvAtKgL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/7127V+kWKEL._AC_SY741_.jpg",
+                "https://c.media-amazon.com/images/I/71q1xDfMz6L._AC_SY741_.jpg"
+            ],
+            "link": "https://amzn.to/4jKJfoE",
+            "category": "cardigans",
+            "designer_note": "This striped cropped cardigan is a standout piece for 2025, blending spring freshness with fall versatility. Its lightweight knit and trendy button-down design make it perfect for layering over dresses or pairing with high-waisted jeans for a chic, modern look."
+        },
+        {
+            "title": "Arach&Cloz Womens Cropped Cardigan Lightweight 2025 Long Sleeve Bolero Shrug Knit Sweater Tops Cozy Clouds",
+            "images": [
+                "https://m.media-amazon.com/images/I/81lQd5FvH5L._AC_SY741_.jpg",
+                "https://m.media-amazon.com/images/I/81WG9m+pOSL._AC_SY741_.jpg",
+                "https://m.media-amazon.com/images/I/91cFin+u8zL._AC_SY741_.jpg",
+                "https://m.media-amazon.com/images/I/71XIVlXrpPL._AC_SY741_.jpg"
+            ],
+            "link": "https://amzn.to/3EhK21C",
+            "category": "Cardigans"
+        }
+    ],
+    "bags": [],
+    "skirts": [],
+    "pants": [],
+    "accessories": [],
+    "shoes": [
+        {
+            "title": "Naturalizer Women's Flexy Round Toe Ballet Flat",
+            "images": [
+                "https://c.media-amazon.com/images/I/81d6SzhGsGL._AC_SX625_.jpg",
+                "https://c.media-amazon.com/images/I/51hTLDOagtL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/51GotGTzfQL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/51X+gGlHotL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/51i1qRXkfWL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/41bA93NE2nL._AC_SY625_.jpg"
+            ],
+            "link": "https://amzn.to/3ENMgpq",
+            "category": "shoes",
+            "designer_note": "Classic, everyday women's ballet flat with a soft, padded collar for all day comfort"
+        },
+        {
+            "title": "Hash Bubbie Women's Flats Shoes Ballet Flats Dress Shoes Comfortable PU Leather Slip on Shoes for Women",
+            "images": [
+                "https://c.media-amazon.com/images/I/7156F1HU8aL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/71+lp1Zau9L._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/71YrEzHBgSL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/81rD3OSLbSL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/812wVVpeZJL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/61vvVYRyA1L._AC_SY625_.jpg"
+            ],
+            "link": "https://amzn.to/44Lh7xw",
+            "category": "shoes"
+        },
+        {
+            "title": "Ankis Closed Toe Heels for Women -Black Nude Gold Silver Pointed Toe Heels Low Block Chunky Women Pumps with Ankle Strap -2.25 Inch",
+            "images": [
+                "https://c.media-amazon.com/images/I/6149eKK8OcL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/61giZlEzkUL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/51CmNv0B2eL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/61kPauOPAsL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/515VWWaqJ0L._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/81M0aeHhBoL._AC_SY625_.jpg"
+            ],
+            "link": "https://amzn.to/3ECfFTC",
+            "category": "shoes"
+        },
+        {
+            "title": "High Heels.Chunky Heel Pointed Closed Toe Pump Shoes,Party Wedding Fashion Shoes,Gifts for Women",
+            "images": [
+                "https://c.media-amazon.com/images/I/61-uyP-wjAL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/61YDEPDn3xL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/61dJm5vR3gL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/51uV5Ddbc1L._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/51DzQCY22cL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/61Pv2bMNfkL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/61j-bBkvJAL._AC_SY625_.jpg"
+            ],
+            "link": "https://amzn.to/3RBPoru",
+            "category": "shoes"
+        },
+        {
+            "title": "Coutgo Womens Ankle Strap High Heels Open Toe Stiletto Bow Tie Knot Heeled Sandals Fashion Wedding Dress Pump Shoes",
+            "images": [
+                "https://c.media-amazon.com/images/I/71xq8CSci1L._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/71Bfp1wis0L._AC_SY695_.jpg",
+                "https://c.media-amazon.com/images/I/615n5x5cnaL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/61Kzs55CX1L._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/71TNcMI9zIL._AC_SY625_.jpg"
+            ],
+            "link": "https://amzn.to/3EAyLJR",
+            "category": "shoes"
+        },
+        {
+            "title": "Dsevht Black Kitten Heels for Women Closed Pointed Toe Heel Dressy Bow Vintage Heeled Pumps Ankle Strap Party Wedding Sexy Shoes",
+            "images": [
+                "https://c.media-amazon.com/images/I/61qlq2CAbYL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/613BM9vjJUL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/61j+fqrAswL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/71yn1Y7iqjL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/61foOPnUvNL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/51k6yjGGePL._AC_SY625_.jpg"
+            ],
+            "link": "https://amzn.to/3RXneHH",
+            "category": "shoes"
+        },
+        {
+            "title": "LAICIGO Women's Pointed Toe Pumps Ankle Strap Buckle Chunky Block Heel Dress D'Orsay Shoes",
+            "images": [
+                "https://c.media-amazon.com/images/I/71bLOY6nfZL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/71WEwY4yt3L._AC_SY695_.jpg",
+                "https://c.media-amazon.com/images/I/71vSnEr8ieL._AC_SY695_.jpg",
+                "https://c.media-amazon.com/images/I/71+-PMivdjL._AC_SY695_.jpg",
+                "https://c.media-amazon.com/images/I/61W+vhr11wL._AC_SY625_.jpg"
+            ],
+            "link": "https://amzn.to/4jUc2Yg",
+            "category": "shoes"
+        },
+        {
+            "title": "DREAM PAIRS Women's Low Heel Pump Shoes",
+            "images": [
+                "https://c.media-amazon.com/images/I/61y+jVQY3QL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/51uFIxdoh3L._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/51quR6VItKL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/51QLBZWLxpL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/61vA0IX4HCL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/518eJlZcDDL._AC_SY625_.jpg"
+            ],
+            "link": "https://amzn.to/3Yh8iYl",
+            "category": "shoes"
+        },
+        {
+            "title": "IDIFU Women's IN2 Pedazo Dress Shoes Low Block Heels Comfortable Chunky Closed Toe Ankle Strap Wedding Pumps",
+            "images": [
+                "https://c.media-amazon.com/images/I/71Ini2O7ubS._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/81UH1clUjNS._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/71iIylnNHHS._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/61dytS30BIS._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/71Pt5JEZpdS._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/71ztpnY2etS._AC_SY625_.jpg"
+            ],
+            "link": "https://amzn.to/4lKOIOp",
+            "category": "shoes"
+        },
+        {
+            "title": "DREAM PAIRS Women's Closed Pointed Toe Low Chunky Heels Pumps Ankle Strap Wedding Business Dressy Shoes",
+            "images": [
+                "https://c.media-amazon.com/images/I/61ViDpONcuL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/61FURm8t5YL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/61HeQd1o7iL._AC_SY500_.jpg",
+                "https://c.media-amazon.com/images/I/614kNfu7MSL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/61RD-fQYHfL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/617UKZWqKGL._AC_SY625_.jpg"
+            ],
+            "link": "https://amzn.to/3REwPmq",
+            "category": "shoes"
+        },
+        {
+            "title": "Trary Women's Flats, Black Flats for Women, Wide Width Dress Shoes for Women, Womens Flats, Pointed Toe Flats Ballet Flats for Women, Flats Shoes Women Dressy, Ankle Strap Flats,Closed Toe Flats,Flats",
+            "images": [
+                "https://c.media-amazon.com/images/I/61wVjWL8eZL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/61iN5c90HxL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/71XkH5MBivL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/71LyDHWCCrL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/71vk5Mpd37L._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/61wVjWL8eZL._AC_SY625_.jpg"
+            ],
+            "link": "https://amzn.to/44ewyOI",
+            "category": "shoes"
+        },
+        {
+            "title": "Frank Mully Women’s Ballet Flat Shoes Knit Dress Shoes Round Toe Slip On Ballerina Walking Flats Shoes for Woman Low Wedge Comfort Soft",
+            "images": [
+                "https://c.media-amazon.com/images/I/71E78GG4LBL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/519tSmkBrsL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/61k4bev2pbL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/71a7XgighCL._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/71-zb0gLo9L._AC_SY625_.jpg",
+                "https://c.media-amazon.com/images/I/71upi6Mh1TL._AC_SY625_.jpg"
+            ],
+            "link": "https://amzn.to/3SaF0ac"
+        }
+    ]
+}
