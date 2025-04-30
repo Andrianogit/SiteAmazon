@@ -30,7 +30,8 @@ def load_products():
         with open("products.json", "r", encoding="utf-8-sig") as f:
             return json.load(f)
     except FileNotFoundError:
-        return {cat: [] for cat in categories}
+        return {cat: [] for cat in categories}  # возвращаем словарь по категориям
+
 
 # Сохранение товаров
 def save_products(products):
