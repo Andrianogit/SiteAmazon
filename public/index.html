@@ -1,16 +1,41 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home and Kitchen</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Montserrat', sans-serif; background: #fff6f9; color: #444; padding: 20px; }
-    header { text-align: center; margin-bottom: 40px; }
-    header h1 { font-family: 'Playfair Display', serif; font-size: 3rem; color: #6b8e23; margin-bottom: 15px; letter-spacing: 1px; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #fff6f9;
+      color: #444;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: #6b8e23;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
     #searchInput {
       padding: 12px 18px;
       font-size: 16px;
@@ -23,10 +48,12 @@
       outline: none;
       transition: 0.3s ease;
     }
+
     #searchInput:focus {
       border-color: #6b8e23;
       box-shadow: 0 0 8px rgba(107, 142, 35, 0.2);
     }
+
     .tabs {
       display: flex;
       flex-wrap: wrap;
@@ -34,6 +61,7 @@
       margin: 20px 0;
       gap: 10px;
     }
+
     .tab-button {
       padding: 10px 20px;
       background: #ccc;
@@ -44,12 +72,20 @@
       font-weight: 600;
       transition: background 0.3s, color 0.3s;
     }
+
     .tab-button.active {
       background: #6b8e23;
       color: #fff;
     }
-    .tab-content { display: none; }
-    .tab-content.active { display: block; }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
     ul.product-list {
       list-style: none;
       display: grid;
@@ -57,6 +93,7 @@
       gap: 30px;
       margin-top: 30px;
     }
+
     ul.product-list li {
       background: #ffffff;
       border-radius: 18px;
@@ -64,10 +101,12 @@
       padding: 16px;
       transition: all 0.3s ease;
     }
+
     ul.product-list li:hover {
       transform: translateY(-6px);
       box-shadow: 0 10px 20px rgba(233, 30, 99, 0.2);
     }
+
     ul.product-list img {
       width: 100%;
       height: 741px;
@@ -78,12 +117,14 @@
       margin: 0 auto;
       cursor: pointer;
     }
+
     ul.product-list p {
       font-weight: 600;
       font-size: 16px;
       margin: 15px 0 10px;
       color: #4e6e0e;
     }
+
     ul.product-list a {
       color: #6b8e23;
       text-decoration: none;
@@ -91,8 +132,15 @@
       display: inline-block;
       margin-top: 5px;
     }
-    ul.product-list a:hover { text-decoration: underline; }
-    .splide__pagination { display: none !important; }
+
+    ul.product-list a:hover {
+      text-decoration: underline;
+    }
+
+    .splide__pagination {
+      display: none !important;
+    }
+
     #modal {
       display: none;
       position: fixed;
@@ -105,38 +153,30 @@
       justify-content: center;
       align-items: center;
     }
+
     #modal img {
       max-width: 90%;
       max-height: 90%;
       border-radius: 10px;
     }
-    #backToTop {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: #6b8e23;
-      color: white;
-      font-size: 24px;
-      border: none;
-      cursor: pointer;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
-    }
-    #backToTop:hover {
-      background: #4e6e0e;
-    }
+
     @media screen and (max-width: 600px) {
-      header h1 { font-size: 2rem; }
-      ul.product-list { grid-template-columns: 1fr; }
-      ul.product-list img { height: auto; max-height: 500px; }
+      header h1 {
+        font-size: 2rem;
+      }
+
+      ul.product-list {
+        grid-template-columns: 1fr;
+      }
+
+      ul.product-list img {
+        height: auto;
+        max-height: 500px;
+      }
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1>Home and Kitchen</h1>
@@ -146,337 +186,362 @@
   <!-- Tabs -->
   <div class="tabs">
     
-      
-        <button class="tab-button" data-tab="Cookware">Cookware</button>
-      
     
-      
-        <button class="tab-button" data-tab="Appliances">Appliances</button>
-      
+    <button class="tab-button" data-tab="Cookware">Cookware</button>
     
-      
-        <button class="tab-button" data-tab="Storage">Storage</button>
-      
     
-      
-        <button class="tab-button" data-tab="Cleaning">Cleaning</button>
-      
     
-      
+    <button class="tab-button" data-tab="Appliances">Appliances</button>
     
-      
     
-      
     
-      
+    <button class="tab-button" data-tab="Storage">Storage</button>
+    
+    
+    
+    <button class="tab-button" data-tab="Cleaning">Cleaning</button>
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
   </div>
 
   <!-- Tab Contents -->
   
-    
-    <div class="tab-content" id="Cookware">
-      <ul class="product-list">
-        
-        <li>
-          <div class="splide" id="splide-1-Cookware">
-            <div class="splide__track">
-              <ul class="splide__list">
-                
-                <li class="splide__slide">
-                  <img src="https://f.media-amazon.com/images/I/810-Z1ODvpL._SX425_.jpg" alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel" onclick="openModal(this.src)">
-                </li>
-                
-                <li class="splide__slide">
-                  <img src="https://f.media-amazon.com/images/I/81ValwUwqtL._SX425_.jpg" alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel" onclick="openModal(this.src)">
-                </li>
-                
-                <li class="splide__slide">
-                  <img src="https://f.media-amazon.com/images/I/81vtR03L33L._SX425_.jpg" alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel" onclick="openModal(this.src)">
-                </li>
-                
-              </ul>
-            </div>
-          </div>
-          <p>Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel</p>
-          <a href="https://amzn.to/42D7kbC" target="_blank">Buy on Amazon</a>
-        </li>
-        
-      </ul>
-    </div>
-    
   
-    
-    <div class="tab-content" id="Appliances">
-      <ul class="product-list">
-        
-        <li>
-          <div class="splide" id="splide-1-Appliances">
-            <div class="splide__track">
-              <ul class="splide__list">
-                
-                <li class="splide__slide">
-                  <img src="https://f.media-amazon.com/images/I/810-Z1ODvpL._SX425_.jpg" alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel" onclick="openModal(this.src)">
-                </li>
-                
-                <li class="splide__slide">
-                  <img src="https://f.media-amazon.com/images/I/81ValwUwqtL._SX425_.jpg" alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel" onclick="openModal(this.src)">
-                </li>
-                
-                <li class="splide__slide">
-                  <img src="https://f.media-amazon.com/images/I/81vtR03L33L._SX425_.jpg" alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel" onclick="openModal(this.src)">
-                </li>
-                
-              </ul>
-            </div>
+  <div class="tab-content" id="Cookware">
+    <ul class="product-list">
+      
+      <li>
+        <div class="splide" id="splide-1-Cookware">
+          <div class="splide__track">
+            <ul class="splide__list">
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/810-Z1ODvpL._SX425_.jpg" alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/81ValwUwqtL._SX425_.jpg" alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/81vtR03L33L._SX425_.jpg" alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel" onclick="openModal(this.src)">
+              </li>
+              
+            </ul>
           </div>
-          <p>Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel</p>
-          <a href="https://amzn.to/42D7kbC" target="_blank">Buy on Amazon</a>
-        </li>
-        
-      </ul>
-    </div>
-    
+        </div>
+        <p>Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel</p>
+        <a href="https://amzn.to/42D7kbC" target="_blank">Buy on Amazon</a>
+      </li>
+      
+    </ul>
+  </div>
   
-    
-    <div class="tab-content" id="Storage">
-      <ul class="product-list">
-        
-        <li>
-          <div class="splide" id="splide-1-Storage">
-            <div class="splide__track">
-              <ul class="splide__list">
-                
-                <li class="splide__slide">
-                  <img src="https://f.media-amazon.com/images/I/71tpOZEW0eL._AC_SL1500_.jpg" alt="LEVOIT Mini Air Purifier for Bedroom Home" onclick="openModal(this.src)">
-                </li>
-                
-                <li class="splide__slide">
-                  <img src="https://f.media-amazon.com/images/I/71Wo7US5scL._AC_SL1500_.jpg" alt="LEVOIT Mini Air Purifier for Bedroom Home" onclick="openModal(this.src)">
-                </li>
-                
-                <li class="splide__slide">
-                  <img src="https://f.media-amazon.com/images/I/719T99FoFkL._AC_SL1500_.jpg" alt="LEVOIT Mini Air Purifier for Bedroom Home" onclick="openModal(this.src)">
-                </li>
-                
-              </ul>
-            </div>
-          </div>
-          <p>LEVOIT Mini Air Purifier for Bedroom Home</p>
-          <a href="https://amzn.to/4cVE5ny" target="_blank">Buy on Amazon</a>
-        </li>
-        
-      </ul>
-    </div>
-    
   
-    
-    <div class="tab-content" id="Cleaning">
-      <ul class="product-list">
-        
-        <li>
-          <div class="splide" id="splide-1-Cleaning">
-            <div class="splide__track">
-              <ul class="splide__list">
-                
-                <li class="splide__slide">
-                  <img src="https://f.media-amazon.com/images/I/61ta3+SrKXL._AC_SX569_.jpg" alt="Kärcher WV 1 Electric Window Vacuum Squeegee 10" onclick="openModal(this.src)">
-                </li>
-                
-                <li class="splide__slide">
-                  <img src="https://f.media-amazon.com/images/I/61BQd4uXxmL._AC_SX569_.jpg" alt="Kärcher WV 1 Electric Window Vacuum Squeegee 10" onclick="openModal(this.src)">
-                </li>
-                
-                <li class="splide__slide">
-                  <img src="https://f.media-amazon.com/images/I/71gleYNnb8L._AC_SX569_.jpg" alt="Kärcher WV 1 Electric Window Vacuum Squeegee 10" onclick="openModal(this.src)">
-                </li>
-                
-              </ul>
-            </div>
-          </div>
-          <p>Kärcher WV 1 Electric Window Vacuum Squeegee 10</p>
-          <a href="https://amzn.to/4iLtlK2" target="_blank">Buy on Amazon</a>
-        </li>
-        
-        <li>
-          <div class="splide" id="splide-2-Cleaning">
-            <div class="splide__track">
-              <ul class="splide__list">
-                
-                <li class="splide__slide">
-                  <img src="https://f.media-amazon.com/images/I/81y28UkN3CL._AC_SX569_PIbundle-6" alt="WypAll PowerClean ProScrub Heavy Duty Wet Towels" onclick="openModal(this.src)">
-                </li>
-                
-                <li class="splide__slide">
-                  <img src="TopRight" alt="WypAll PowerClean ProScrub Heavy Duty Wet Towels" onclick="openModal(this.src)">
-                </li>
-                
-                <li class="splide__slide">
-                  <img src="0" alt="WypAll PowerClean ProScrub Heavy Duty Wet Towels" onclick="openModal(this.src)">
-                </li>
-                
-                <li class="splide__slide">
-                  <img src="0_SH20_.jpg" alt="WypAll PowerClean ProScrub Heavy Duty Wet Towels" onclick="openModal(this.src)">
-                </li>
-                
-                <li class="splide__slide">
-                  <img src="https://f.media-amazon.com/images/I/81lSF5Uc2HL._AC_SX569_.jpg" alt="WypAll PowerClean ProScrub Heavy Duty Wet Towels" onclick="openModal(this.src)">
-                </li>
-                
-                <li class="splide__slide">
-                  <img src="" alt="WypAll PowerClean ProScrub Heavy Duty Wet Towels" onclick="openModal(this.src)">
-                </li>
-                
-              </ul>
-            </div>
-          </div>
-          <p>WypAll PowerClean ProScrub Heavy Duty Wet Towels</p>
-          <a href="https://amzn.to/4lU9ZVJ" target="_blank">Buy on Amazon</a>
-        </li>
-        
-        <li>
-          <div class="splide" id="splide-3-Cleaning">
-            <div class="splide__track">
-              <ul class="splide__list">
-                
-                <li class="splide__slide">
-                  <img src="https://f.media-amazon.com/images/I/51Wh5LZNaSL._AC_SX569_.jpg" alt="ECOVACS Winbot W1 Pro Window Cleaning Robot" onclick="openModal(this.src)">
-                </li>
-                
-                <li class="splide__slide">
-                  <img src="https://f.media-amazon.com/images/I/61-tYK1LI+L._AC_SY879_.jpg" alt="ECOVACS Winbot W1 Pro Window Cleaning Robot" onclick="openModal(this.src)">
-                </li>
-                
-                <li class="splide__slide">
-                  <img src="https://f.media-amazon.com/images/I/61cltkjUtAL._AC_SY879_.jpg" alt="ECOVACS Winbot W1 Pro Window Cleaning Robot" onclick="openModal(this.src)">
-                </li>
-                
-              </ul>
-            </div>
-          </div>
-          <p>ECOVACS Winbot W1 Pro Window Cleaning Robot</p>
-          <a href="https://amzn.to/4jysbCG" target="_blank">Buy on Amazon</a>
-        </li>
-        
-        <li>
-          <div class="splide" id="splide-4-Cleaning">
-            <div class="splide__track">
-              <ul class="splide__list">
-                
-                <li class="splide__slide">
-                  <img src="https://f.media-amazon.com/images/I/81LeGewL7iL._AC_SX569_.jpg" alt="Little Green HydroSteam Multi-Purpose Portable Carpet and Cleaner" onclick="openModal(this.src)">
-                </li>
-                
-                <li class="splide__slide">
-                  <img src="https://f.media-amazon.com/images/I/71JnybCT+HL._AC_SX569_.jpg" alt="Little Green HydroSteam Multi-Purpose Portable Carpet and Cleaner" onclick="openModal(this.src)">
-                </li>
-                
-                <li class="splide__slide">
-                  <img src="https://f.media-amazon.com/images/I/71oefwijPkL._AC_SX569_.jpg" alt="Little Green HydroSteam Multi-Purpose Portable Carpet and Cleaner" onclick="openModal(this.src)">
-                </li>
-                
-              </ul>
-            </div>
-          </div>
-          <p>Little Green HydroSteam Multi-Purpose Portable Carpet and Cleaner</p>
-          <a href="https://amzn.to/3GKPt9Q" target="_blank">Buy on Amazon</a>
-        </li>
-        
-        <li>
-          <div class="splide" id="splide-5-Cleaning">
-            <div class="splide__track">
-              <ul class="splide__list">
-                
-                <li class="splide__slide">
-                  <img src="https://f.media-amazon.com/images/I/61xiotBsLhL._AC_SX569_.jpg" alt="BISSELL® SpinWave Hard Floor Expert Corded Spin Mop Cleaner" onclick="openModal(this.src)">
-                </li>
-                
-                <li class="splide__slide">
-                  <img src="https://f.media-amazon.com/images/I/61ge6Tm4EvL._AC_SX569_.jpg" alt="BISSELL® SpinWave Hard Floor Expert Corded Spin Mop Cleaner" onclick="openModal(this.src)">
-                </li>
-                
-                <li class="splide__slide">
-                  <img src="https://f.media-amazon.com/images/I/71LpsHyNWqL._AC_SX569_.jpg" alt="BISSELL® SpinWave Hard Floor Expert Corded Spin Mop Cleaner" onclick="openModal(this.src)">
-                </li>
-                
-              </ul>
-            </div>
-          </div>
-          <p>BISSELL® SpinWave Hard Floor Expert Corded Spin Mop Cleaner</p>
-          <a href="https://amzn.to/3GLc5Hi" target="_blank">Buy on Amazon</a>
-        </li>
-        
-      </ul>
-    </div>
-    
   
-    
+  <div class="tab-content" id="Appliances">
+    <ul class="product-list">
+      
+      <li>
+        <div class="splide" id="splide-1-Appliances">
+          <div class="splide__track">
+            <ul class="splide__list">
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/810-Z1ODvpL._SX425_.jpg" alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/81ValwUwqtL._SX425_.jpg" alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/81vtR03L33L._SX425_.jpg" alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel" onclick="openModal(this.src)">
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+        <p>Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel</p>
+        <a href="https://amzn.to/42D7kbC" target="_blank">Buy on Amazon</a>
+      </li>
+      
+    </ul>
+  </div>
   
-    
   
-    
   
-    
+  <div class="tab-content" id="Storage">
+    <ul class="product-list">
+      
+      <li>
+        <div class="splide" id="splide-1-Storage">
+          <div class="splide__track">
+            <ul class="splide__list">
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/71tpOZEW0eL._AC_SL1500_.jpg" alt="LEVOIT Mini Air Purifier for Bedroom Home" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/71Wo7US5scL._AC_SL1500_.jpg" alt="LEVOIT Mini Air Purifier for Bedroom Home" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/719T99FoFkL._AC_SL1500_.jpg" alt="LEVOIT Mini Air Purifier for Bedroom Home" onclick="openModal(this.src)">
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+        <p>LEVOIT Mini Air Purifier for Bedroom Home</p>
+        <a href="https://amzn.to/4cVE5ny" target="_blank">Buy on Amazon</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  
+  
+  <div class="tab-content" id="Cleaning">
+    <ul class="product-list">
+      
+      <li>
+        <div class="splide" id="splide-1-Cleaning">
+          <div class="splide__track">
+            <ul class="splide__list">
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/61ta3+SrKXL._AC_SX569_.jpg" alt="Kärcher WV 1 Electric Window Vacuum Squeegee 10" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/61BQd4uXxmL._AC_SX569_.jpg" alt="Kärcher WV 1 Electric Window Vacuum Squeegee 10" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/71gleYNnb8L._AC_SX569_.jpg" alt="Kärcher WV 1 Electric Window Vacuum Squeegee 10" onclick="openModal(this.src)">
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+        <p>Kärcher WV 1 Electric Window Vacuum Squeegee 10</p>
+        <a href="https://amzn.to/4iLtlK2" target="_blank">Buy on Amazon</a>
+      </li>
+      
+      <li>
+        <div class="splide" id="splide-2-Cleaning">
+          <div class="splide__track">
+            <ul class="splide__list">
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/61ta3+SrKXL._AC_SX569_.jpg" alt="Kärcher WV 1 Electric Window Vacuum Squeegee 10" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/61BQd4uXxmL._AC_SX569_.jpg" alt="Kärcher WV 1 Electric Window Vacuum Squeegee 10" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/71gleYNnb8L._AC_SX569_.jpg" alt="Kärcher WV 1 Electric Window Vacuum Squeegee 10" onclick="openModal(this.src)">
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+        <p>Kärcher WV 1 Electric Window Vacuum Squeegee 10</p>
+        <a href="https://amzn.to/4iLtlK2" target="_blank">Buy on Amazon</a>
+      </li>
+      
+      <li>
+        <div class="splide" id="splide-3-Cleaning">
+          <div class="splide__track">
+            <ul class="splide__list">
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/81y28UkN3CL._AC_SX569_PIbundle-6" alt="WypAll PowerClean ProScrub Heavy Duty Wet Towels" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="TopRight" alt="WypAll PowerClean ProScrub Heavy Duty Wet Towels" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="0" alt="WypAll PowerClean ProScrub Heavy Duty Wet Towels" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="0_SH20_.jpg" alt="WypAll PowerClean ProScrub Heavy Duty Wet Towels" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/81lSF5Uc2HL._AC_SX569_.jpg" alt="WypAll PowerClean ProScrub Heavy Duty Wet Towels" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="" alt="WypAll PowerClean ProScrub Heavy Duty Wet Towels" onclick="openModal(this.src)">
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+        <p>WypAll PowerClean ProScrub Heavy Duty Wet Towels</p>
+        <a href="https://amzn.to/4lU9ZVJ" target="_blank">Buy on Amazon</a>
+      </li>
+      
+      <li>
+        <div class="splide" id="splide-4-Cleaning">
+          <div class="splide__track">
+            <ul class="splide__list">
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/51Wh5LZNaSL._AC_SX569_.jpg" alt="ECOVACS Winbot W1 Pro Window Cleaning Robot" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/61-tYK1LI+L._AC_SY879_.jpg" alt="ECOVACS Winbot W1 Pro Window Cleaning Robot" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/61cltkjUtAL._AC_SY879_.jpg" alt="ECOVACS Winbot W1 Pro Window Cleaning Robot" onclick="openModal(this.src)">
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+        <p>ECOVACS Winbot W1 Pro Window Cleaning Robot</p>
+        <a href="https://amzn.to/4jysbCG" target="_blank">Buy on Amazon</a>
+      </li>
+      
+      <li>
+        <div class="splide" id="splide-5-Cleaning">
+          <div class="splide__track">
+            <ul class="splide__list">
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/81LeGewL7iL._AC_SX569_.jpg" alt="Little Green HydroSteam Multi-Purpose Portable Carpet and Cleaner" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/71JnybCT+HL._AC_SX569_.jpg" alt="Little Green HydroSteam Multi-Purpose Portable Carpet and Cleaner" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/71oefwijPkL._AC_SX569_.jpg" alt="Little Green HydroSteam Multi-Purpose Portable Carpet and Cleaner" onclick="openModal(this.src)">
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+        <p>Little Green HydroSteam Multi-Purpose Portable Carpet and Cleaner</p>
+        <a href="https://amzn.to/3GKPt9Q" target="_blank">Buy on Amazon</a>
+      </li>
+      
+      <li>
+        <div class="splide" id="splide-6-Cleaning">
+          <div class="splide__track">
+            <ul class="splide__list">
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/61xiotBsLhL._AC_SX569_.jpg" alt="BISSELL® SpinWave Hard Floor Expert Corded Spin Mop Cleaner" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/61ge6Tm4EvL._AC_SX569_.jpg" alt="BISSELL® SpinWave Hard Floor Expert Corded Spin Mop Cleaner" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/71LpsHyNWqL._AC_SX569_.jpg" alt="BISSELL® SpinWave Hard Floor Expert Corded Spin Mop Cleaner" onclick="openModal(this.src)">
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+        <p>BISSELL® SpinWave Hard Floor Expert Corded Spin Mop Cleaner</p>
+        <a href="https://amzn.to/3GLc5Hi" target="_blank">Buy on Amazon</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
 
   <div id="modal" onclick="closeModal()">
     <img id="modalImage" src="" alt="Modal image">
   </div>
 
-  <!-- Кнопка вверх -->
-  <button id="backToTop" title="Back to top">↑</button>
-
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       
-        
-          new Splide('#splide-1-Cookware', {
-            type: 'loop', perPage: 1, pagination: false, arrows: true, height: 'auto'
-          }).mount();
-        
       
-        
-          new Splide('#splide-1-Appliances', {
-            type: 'loop', perPage: 1, pagination: false, arrows: true, height: 'auto'
-          }).mount();
-        
+      new Splide('#splide-1-Cookware', {
+        type: 'loop', perPage: 1, pagination: false, arrows: true, height: 'auto'
+      }).mount();
       
-        
-          new Splide('#splide-1-Storage', {
-            type: 'loop', perPage: 1, pagination: false, arrows: true, height: 'auto'
-          }).mount();
-        
       
-        
-          new Splide('#splide-1-Cleaning', {
-            type: 'loop', perPage: 1, pagination: false, arrows: true, height: 'auto'
-          }).mount();
-        
-          new Splide('#splide-2-Cleaning', {
-            type: 'loop', perPage: 1, pagination: false, arrows: true, height: 'auto'
-          }).mount();
-        
-          new Splide('#splide-3-Cleaning', {
-            type: 'loop', perPage: 1, pagination: false, arrows: true, height: 'auto'
-          }).mount();
-        
-          new Splide('#splide-4-Cleaning', {
-            type: 'loop', perPage: 1, pagination: false, arrows: true, height: 'auto'
-          }).mount();
-        
-          new Splide('#splide-5-Cleaning', {
-            type: 'loop', perPage: 1, pagination: false, arrows: true, height: 'auto'
-          }).mount();
-        
       
-        
+      new Splide('#splide-1-Appliances', {
+        type: 'loop', perPage: 1, pagination: false, arrows: true, height: 'auto'
+      }).mount();
       
-        
       
-        
       
-        
+      new Splide('#splide-1-Storage', {
+        type: 'loop', perPage: 1, pagination: false, arrows: true, height: 'auto'
+      }).mount();
+      
+      
+      
+      new Splide('#splide-1-Cleaning', {
+        type: 'loop', perPage: 1, pagination: false, arrows: true, height: 'auto'
+      }).mount();
+      
+      new Splide('#splide-2-Cleaning', {
+        type: 'loop', perPage: 1, pagination: false, arrows: true, height: 'auto'
+      }).mount();
+      
+      new Splide('#splide-3-Cleaning', {
+        type: 'loop', perPage: 1, pagination: false, arrows: true, height: 'auto'
+      }).mount();
+      
+      new Splide('#splide-4-Cleaning', {
+        type: 'loop', perPage: 1, pagination: false, arrows: true, height: 'auto'
+      }).mount();
+      
+      new Splide('#splide-5-Cleaning', {
+        type: 'loop', perPage: 1, pagination: false, arrows: true, height: 'auto'
+      }).mount();
+      
+      new Splide('#splide-6-Cleaning', {
+        type: 'loop', perPage: 1, pagination: false, arrows: true, height: 'auto'
+      }).mount();
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
 
       // Поиск
@@ -499,19 +564,6 @@
         });
       });
       document.querySelector('.tab-button')?.click();
-
-      // Back to Top
-      const backToTopBtn = document.getElementById('backToTop');
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-          backToTopBtn.style.display = 'flex';
-        } else {
-          backToTopBtn.style.display = 'none';
-        }
-      });
-      backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
     });
 
     function openModal(src) {
@@ -523,4 +575,5 @@
     }
   </script>
 </body>
+
 </html>
