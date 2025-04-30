@@ -203,6 +203,8 @@
     
     
     
+    <button class="tab-button" data-tab="Tableware">Tableware</button>
+    
     
     
     
@@ -475,6 +477,36 @@
   
   
   
+  <div class="tab-content" id="Tableware">
+    <ul class="product-list">
+      
+      <li>
+        <div class="splide" id="splide-1-Tableware">
+          <div class="splide__track">
+            <ul class="splide__list">
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/61ta3+SrKXL._AC_SX569_.jpg" alt="Kärcher WV 1 Electric Window Vacuum Squeegee 10" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/61BQd4uXxmL._AC_SX569_.jpg" alt="Kärcher WV 1 Electric Window Vacuum Squeegee 10" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/71gleYNnb8L._AC_SX569_.jpg" alt="Kärcher WV 1 Electric Window Vacuum Squeegee 10" onclick="openModal(this.src)">
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+        <p>Kärcher WV 1 Electric Window Vacuum Squeegee 10</p>
+        <a href="https://amzn.to/4iLtlK2" target="_blank">Buy on Amazon</a>
+      </li>
+      
+    </ul>
+  </div>
+  
   
   
   
@@ -535,6 +567,10 @@
       }).mount();
       
       
+      
+      new Splide('#splide-1-Tableware', {
+        type: 'loop', perPage: 1, pagination: false, arrows: true, height: 'auto'
+      }).mount();
       
       
       
