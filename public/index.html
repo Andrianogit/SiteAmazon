@@ -54,7 +54,37 @@
       box-shadow: 0 0 8px rgba(107, 142, 35, 0.2);
     }
 
-    ul#productList {
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px 0;
+      gap: 10px;
+    }
+
+    .tab-button {
+      padding: 10px 20px;
+      background: #6b8e23;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .tab-button.active {
+      background: #558a2f;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    ul.product-list {
       list-style: none;
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -62,7 +92,7 @@
       margin-top: 30px;
     }
 
-    ul#productList li {
+    ul.product-list li {
       background: #ffffff;
       border-radius: 18px;
       box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
@@ -70,12 +100,12 @@
       transition: all 0.3s ease;
     }
 
-    ul#productList li:hover {
+    ul.product-list li:hover {
       transform: translateY(-6px);
       box-shadow: 0 10px 20px rgba(233, 30, 99, 0.2);
     }
 
-    ul#productList img {
+    ul.product-list img {
       width: 100%;
       height: 741px;
       object-fit: contain;
@@ -86,14 +116,14 @@
       cursor: pointer;
     }
 
-    ul#productList p {
+    ul.product-list p {
       font-weight: 600;
       font-size: 16px;
       margin: 15px 0 10px;
       color: #4e6e0e;
     }
 
-    ul#productList a {
+    ul.product-list a {
       color: #6b8e23;
       text-decoration: none;
       font-weight: 500;
@@ -101,16 +131,14 @@
       margin-top: 5px;
     }
 
-    ul#productList a:hover {
+    ul.product-list a:hover {
       text-decoration: underline;
     }
 
-    /* Убираем точки карусели */
     .splide__pagination {
       display: none !important;
     }
 
-    /* Модальное окно */
     #modal {
       display: none;
       position: fixed;
@@ -135,11 +163,11 @@
         font-size: 2rem;
       }
 
-      ul#productList {
+      ul.product-list {
         grid-template-columns: 1fr;
       }
 
-      ul#productList img {
+      ul.product-list img {
         height: auto;
         max-height: 500px;
       }
@@ -152,59 +180,79 @@
     <h1>Home and Kitchen</h1>
     <input type="text" id="searchInput" placeholder="Search for products...">
   </header>
-  <ul id="productList">
-    
-    <li>
-      <div class="splide" id="splide-1">
-        <div class="splide__track">
-          <ul class="splide__list">
-            
-            <li class="splide__slide">
-              <img src="https://f.media-amazon.com/images/I/810-Z1ODvpL._SX425_.jpg" alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel" onclick="openModal(this.src)">
-            </li>
-            
-            <li class="splide__slide">
-              <img src="https://f.media-amazon.com/images/I/81ValwUwqtL._SX425_.jpg" alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel" onclick="openModal(this.src)">
-            </li>
-            
-            <li class="splide__slide">
-              <img src="https://f.media-amazon.com/images/I/81vtR03L33L._SX425_.jpg" alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel" onclick="openModal(this.src)">
-            </li>
-            
-          </ul>
-        </div>
-      </div>
-      <p>Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel</p>
-      <a href="https://amzn.to/42D7kbC" target="_blank">Buy on Amazon</a>
-    </li>
-    
-    <li>
-      <div class="splide" id="splide-2">
-        <div class="splide__track">
-          <ul class="splide__list">
-            
-            <li class="splide__slide">
-              <img src="https://f.media-amazon.com/images/I/810-Z1ODvpL._SX425_.jpg" alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel" onclick="openModal(this.src)">
-            </li>
-            
-            <li class="splide__slide">
-              <img src="https://f.media-amazon.com/images/I/81ValwUwqtL._SX425_.jpg" alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel" onclick="openModal(this.src)">
-            </li>
-            
-            <li class="splide__slide">
-              <img src="https://f.media-amazon.com/images/I/81vtR03L33L._SX425_.jpg" alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel" onclick="openModal(this.src)">
-            </li>
-            
-          </ul>
-        </div>
-      </div>
-      <p>Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel</p>
-      <a href="https://amzn.to/42D7kbC" target="_blank">Buy on Amazon</a>
-    </li>
-    
-  </ul>
 
-  <!-- Модалка -->
+  <!-- Tabs -->
+  <div class="tabs">
+    
+    
+    <button class="tab-button" data-tab="Cookware">Cookware</button>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+
+  <!-- Tab Contents -->
+  
+  
+  <div class="tab-content" id="Cookware">
+    <ul class="product-list">
+      
+      <li>
+        <div class="splide" id="splide-1-Cookware">
+          <div class="splide__track">
+            <ul class="splide__list">
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/810-Z1ODvpL._SX425_.jpg" alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/81ValwUwqtL._SX425_.jpg" alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/81vtR03L33L._SX425_.jpg" alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel" onclick="openModal(this.src)">
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+        <p>Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel</p>
+        <a href="https://amzn.to/42D7kbC" target="_blank">Buy on Amazon</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
   <div id="modal" onclick="closeModal()">
     <img id="modalImage" src="" alt="Modal image">
   </div>
@@ -213,41 +261,53 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       
-      new Splide('#splide-1', {
-        type: 'loop',
-        perPage: 1,
-        pagination: false,
-        arrows: true,
-        height: 'auto',
+      
+      new Splide('#splide-1-Cookware', {
+        type: 'loop', perPage: 1, pagination: false, arrows: true, height: 'auto'
       }).mount();
       
-      new Splide('#splide-2', {
-        type: 'loop',
-        perPage: 1,
-        pagination: false,
-        arrows: true,
-        height: 'auto',
-      }).mount();
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
 
+      // Поиск
       const searchInput = document.getElementById('searchInput');
-      const items = document.querySelectorAll('#productList li');
       searchInput.addEventListener('input', function () {
         const query = this.value.toLowerCase();
-        items.forEach(item => {
+        document.querySelectorAll('.tab-content.active .product-list li').forEach(item => {
           const text = item.querySelector('p').textContent.toLowerCase();
           item.style.display = text.includes(query) ? 'block' : 'none';
         });
       });
+
+      // Табы
+      document.querySelectorAll('.tab-button').forEach(button => {
+        button.addEventListener('click', function () {
+          document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+          document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
+          document.getElementById(this.dataset.tab).style.display = 'block';
+          this.classList.add('active');
+        });
+      });
+      document.querySelector('.tab-button')?.click();
     });
 
     function openModal(src) {
-      const modal = document.getElementById("modal");
-      const modalImg = document.getElementById("modalImage");
-      modal.style.display = "flex";
-      modalImg.src = src;
+      document.getElementById("modal").style.display = "flex";
+      document.getElementById("modalImage").src = src;
     }
-
     function closeModal() {
       document.getElementById("modal").style.display = "none";
     }
