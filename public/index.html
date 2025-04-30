@@ -64,16 +64,18 @@
 
     .tab-button {
       padding: 10px 20px;
-      background: #6b8e23;
-      color: #fff;
+      background: #ccc;
+      color: #333;
       border: none;
       border-radius: 20px;
       cursor: pointer;
       font-weight: 600;
+      transition: background 0.3s, color 0.3s;
     }
 
     .tab-button.active {
-      background: #558a2f;
+      background: #6b8e23;
+      color: #fff;
     }
 
     .tab-content {
@@ -193,6 +195,8 @@
     
     
     
+    <button class="tab-button" data-tab="Storage">Storage</button>
+    
     
     
     
@@ -273,6 +277,36 @@
   
   
   
+  <div class="tab-content" id="Storage">
+    <ul class="product-list">
+      
+      <li>
+        <div class="splide" id="splide-1-Storage">
+          <div class="splide__track">
+            <ul class="splide__list">
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/71tpOZEW0eL._AC_SL1500_.jpg" alt="LEVOIT Mini Air Purifier for Bedroom Home," onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/71Wo7US5scL._AC_SL1500_.jpg" alt="LEVOIT Mini Air Purifier for Bedroom Home," onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/719T99FoFkL._AC_SL1500_.jpg" alt="LEVOIT Mini Air Purifier for Bedroom Home," onclick="openModal(this.src)">
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+        <p>LEVOIT Mini Air Purifier for Bedroom Home,</p>
+        <a href="https://amzn.to/4cVE5ny" target="_blank">Buy on Amazon</a>
+      </li>
+      
+    </ul>
+  </div>
+  
   
   
   
@@ -305,6 +339,10 @@
       }).mount();
       
       
+      
+      new Splide('#splide-1-Storage', {
+        type: 'loop', perPage: 1, pagination: false, arrows: true, height: 'auto'
+      }).mount();
       
       
       
