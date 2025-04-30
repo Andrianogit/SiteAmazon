@@ -21,7 +21,17 @@
             "link": "https://amzn.to/42D7kbC"
         }
     ],
-    "Storage": [],
+    "Storage": [
+        {
+            "title": "LEVOIT Mini Air Purifier for Bedroom Home,",
+            "images": [
+                "https://f.media-amazon.com/images/I/71tpOZEW0eL._AC_SL1500_.jpg",
+                "https://f.media-amazon.com/images/I/71Wo7US5scL._AC_SL1500_.jpg",
+                "https://f.media-amazon.com/images/I/719T99FoFkL._AC_SL1500_.jpg"
+            ],
+            "link": "https://amzn.to/4cVE5ny"
+        }
+    ],
     "Cleaning": [],
     "Tableware": [],
     "Utensils": [],
