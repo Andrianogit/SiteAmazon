@@ -1,7 +1,0 @@
-/sitemap.xml
-  Content-Type: application/xml
-  Cache-Control: no-cache
-
-/sitemap2.xml
-  Content-Type: application/xml
-  Cache-Control: no-cache
