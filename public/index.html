@@ -189,6 +189,8 @@
     
     
     
+    <button class="tab-button" data-tab="Appliances">Appliances</button>
+    
     
     
     
@@ -239,6 +241,36 @@
   
   
   
+  <div class="tab-content" id="Appliances">
+    <ul class="product-list">
+      
+      <li>
+        <div class="splide" id="splide-1-Appliances">
+          <div class="splide__track">
+            <ul class="splide__list">
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/810-Z1ODvpL._SX425_.jpg" alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/81ValwUwqtL._SX425_.jpg" alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/81vtR03L33L._SX425_.jpg" alt="Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel" onclick="openModal(this.src)">
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+        <p>Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel</p>
+        <a href="https://amzn.to/42D7kbC" target="_blank">Buy on Amazon</a>
+      </li>
+      
+    </ul>
+  </div>
+  
   
   
   
@@ -267,6 +299,10 @@
       }).mount();
       
       
+      
+      new Splide('#splide-1-Appliances', {
+        type: 'loop', perPage: 1, pagination: false, arrows: true, height: 'auto'
+      }).mount();
       
       
       
