@@ -2,7 +2,7 @@
 import logging
 import os
 from jinja2 import Template
-from telegram import Update, ReplyKeyboardRemove
+from telegram import Update, ReplyKeyboardMarkup, ReplyKeyboardRemove
 from telegram.ext import (
     ApplicationBuilder,
     ContextTypes,
@@ -13,9 +13,15 @@ from telegram.ext import (
 )
 
 # Состояния
-TITLE, IMAGE, LINK = range(3)
+CATEGORY, TITLE, IMAGE, LINK = range(4)
 
-# Логгинг
+# Категории товаров
+categories = [
+    "Cookware", "Appliances", "Storage", "Cleaning",
+    "Tableware", "Utensils", "Decor", "Lighting"
+]
+
+# Логгирование
 logging.basicConfig(level=logging.INFO)
 
 # Загрузка товаров
@@ -24,83 +30,87 @@ def load_products():
         with open("products.json", "r", encoding="utf-8-sig") as f:
             return json.load(f)
     except FileNotFoundError:
-        return []
+        return {cat: [] for cat in categories}
 
 # Сохранение товаров
 def save_products(products):
     with open("products.json", "w", encoding="utf-8") as f:
         json.dump(products, f, ensure_ascii=False, indent=4)
 
-# Генерация index.html из template.html
+# Генерация index.html
 def generate_index_html():
-    try:
-        with open('products.json', 'r', encoding='utf-8-sig') as f:
-            products = json.load(f)
-    except FileNotFoundError:
-        products = []
-
-    # Загружаем внешний шаблон
+    products = load_products()
     with open('template.html', 'r', encoding='utf-8') as f:
-        template_content = f.read()
-    template = Template(template_content)
-
+        template = Template(f.read())
     html_content = template.render(products=products)
-
     os.makedirs("public", exist_ok=True)
-    with open(os.path.join("public", "index.html"), "w", encoding="utf-8") as f:
+    with open("public/index.html", "w", encoding="utf-8") as f:
         f.write(html_content)
-
     print("✅ index.html успешно обновлён.")
 
-# Команда /start
+# Старт
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
-    await update.message.reply_text("📦 Введи название товара:")
+    keyboard = [[cat] for cat in categories]
+    await update.message.reply_text(
+        "📦 Choose product category:",
+        reply_markup=ReplyKeyboardMarkup(keyboard, one_time_keyboard=True, resize_keyboard=True)
+    )
+    return CATEGORY
+
+# Категория
+async def get_category(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
+    category = update.message.text
+    if category not in categories:
+        await update.message.reply_text("❌ Invalid category. Choose from menu.")
+        return CATEGORY
+    context.user_data["category"] = category
+    await update.message.reply_text("📦 Enter product title:", reply_markup=ReplyKeyboardRemove())
     return TITLE
 
-# Получение названия
+# Название
 async def get_title(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
-    context.user_data["title"] = update.message.text
-    await update.message.reply_text("🖼 Отправь ссылку на изображение (или несколько через запятую):")
+    context.user_data["title"] = update.message.text.strip()
+    await update.message.reply_text("🖼 Send image link(s), comma separated:")
     return IMAGE
 
-# Получение изображений
+# Картинки
 async def get_image(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
-    image_links = update.message.text.strip().split(",")
-    context.user_data["images"] = [img.strip() for img in image_links]
-    await update.message.reply_text("🔗 Отправь партнёрскую ссылку на товар:")
+    context.user_data["images"] = [img.strip() for img in update.message.text.split(",")]
+    await update.message.reply_text("🔗 Send Amazon affiliate link:")
     return LINK
 
-# Получение ссылки
+# Ссылка
 async def get_link(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
-    context.user_data["link"] = update.message.text
+    context.user_data["link"] = update.message.text.strip()
 
-    # Создание нового товара
-    new_product = {
+    product = {
         "title": context.user_data["title"],
         "images": context.user_data["images"],
-        "link": context.user_data["link"],
+        "link": context.user_data["link"]
     }
 
     products = load_products()
-    products.insert(0, new_product)
+    cat = context.user_data["category"]
+    products.setdefault(cat, []).insert(0, product)
     save_products(products)
     generate_index_html()
 
-    await update.message.reply_text("✅ Товар добавлен!", reply_markup=ReplyKeyboardRemove())
+    await update.message.reply_text("✅ Product added!", reply_markup=ReplyKeyboardRemove())
     return ConversationHandler.END
 
 # Отмена
 async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
-    await update.message.reply_text("❌ Добавление отменено.", reply_markup=ReplyKeyboardRemove())
+    await update.message.reply_text("❌ Cancelled.", reply_markup=ReplyKeyboardRemove())
     return ConversationHandler.END
 
-# Запуск бота
+# Main
 def main():
     app = ApplicationBuilder().token("7772105188:AAGsjeL4YIBWbTDcMtmzYimwawV8ALbhn7g").build()
 
-    conv_handler = ConversationHandler(
+    conv = ConversationHandler(
         entry_points=[CommandHandler("start", start)],
         states={
+            CATEGORY: [MessageHandler(filters.TEXT & ~filters.COMMAND, get_category)],
             TITLE: [MessageHandler(filters.TEXT & ~filters.COMMAND, get_title)],
             IMAGE: [MessageHandler(filters.TEXT & ~filters.COMMAND, get_image)],
             LINK: [MessageHandler(filters.TEXT & ~filters.COMMAND, get_link)],
@@ -108,9 +118,10 @@ def main():
         fallbacks=[CommandHandler("cancel", cancel)],
     )
 
-    app.add_handler(conv_handler)
-    print("🤖 Бот запущен")
+    app.add_handler(conv)
+    print("🤖 Bot started")
     app.run_polling()
 
 if __name__ == "__main__":
     main()
+
