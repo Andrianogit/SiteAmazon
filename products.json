@@ -10,7 +10,17 @@
             "link": "https://amzn.to/42D7kbC"
         }
     ],
-    "Appliances": [],
+    "Appliances": [
+        {
+            "title": "Amazon Basics Triple Slow Cooker, 3 x 2.5 Quart, Stainless Steel",
+            "images": [
+                "https://f.media-amazon.com/images/I/810-Z1ODvpL._SX425_.jpg",
+                "https://f.media-amazon.com/images/I/81ValwUwqtL._SX425_.jpg",
+                "https://f.media-amazon.com/images/I/81vtR03L33L._SX425_.jpg"
+            ],
+            "link": "https://amzn.to/42D7kbC"
+        }
+    ],
     "Storage": [],
     "Cleaning": [],
     "Tableware": [],
