@@ -1,16 +1,41 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home and Kitchen</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Montserrat', sans-serif; background: #fff6f9; color: #444; padding: 20px; }
-    header { text-align: center; margin-bottom: 40px; }
-    header h1 { font-family: 'Playfair Display', serif; font-size: 3rem; color: #6b8e23; margin-bottom: 15px; letter-spacing: 1px; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #fff6f9;
+      color: #444;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: #6b8e23;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
     #searchInput {
       padding: 12px 18px;
       font-size: 16px;
@@ -23,10 +48,12 @@
       outline: none;
       transition: 0.3s ease;
     }
+
     #searchInput:focus {
       border-color: #6b8e23;
       box-shadow: 0 0 8px rgba(107, 142, 35, 0.2);
     }
+
     .tabs {
       display: flex;
       flex-wrap: wrap;
@@ -34,6 +61,7 @@
       margin: 20px 0;
       gap: 10px;
     }
+
     .tab-button {
       padding: 10px 20px;
       background: #ccc;
@@ -44,12 +72,20 @@
       font-weight: 600;
       transition: background 0.3s, color 0.3s;
     }
+
     .tab-button.active {
       background: #6b8e23;
       color: #fff;
     }
-    .tab-content { display: none; }
-    .tab-content.active { display: block; }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
     ul.product-list {
       list-style: none;
       display: grid;
@@ -57,6 +93,7 @@
       gap: 30px;
       margin-top: 30px;
     }
+
     ul.product-list li {
       background: #ffffff;
       border-radius: 18px;
@@ -64,10 +101,12 @@
       padding: 16px;
       transition: all 0.3s ease;
     }
+
     ul.product-list li:hover {
       transform: translateY(-6px);
       box-shadow: 0 10px 20px rgba(233, 30, 99, 0.2);
     }
+
     ul.product-list img {
       width: 100%;
       height: 741px;
@@ -78,12 +117,14 @@
       margin: 0 auto;
       cursor: pointer;
     }
+
     ul.product-list p {
       font-weight: 600;
       font-size: 16px;
       margin: 15px 0 10px;
       color: #4e6e0e;
     }
+
     ul.product-list a {
       color: #6b8e23;
       text-decoration: none;
@@ -91,8 +132,15 @@
       display: inline-block;
       margin-top: 5px;
     }
-    ul.product-list a:hover { text-decoration: underline; }
-    .splide__pagination { display: none !important; }
+
+    ul.product-list a:hover {
+      text-decoration: underline;
+    }
+
+    .splide__pagination {
+      display: none !important;
+    }
+
     #modal {
       display: none;
       position: fixed;
@@ -105,38 +153,30 @@
       justify-content: center;
       align-items: center;
     }
+
     #modal img {
       max-width: 90%;
       max-height: 90%;
       border-radius: 10px;
     }
-    #backToTop {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: #6b8e23;
-      color: white;
-      font-size: 24px;
-      border: none;
-      cursor: pointer;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
-    }
-    #backToTop:hover {
-      background: #4e6e0e;
-    }
+
     @media screen and (max-width: 600px) {
-      header h1 { font-size: 2rem; }
-      ul.product-list { grid-template-columns: 1fr; }
-      ul.product-list img { height: auto; max-height: 500px; }
+      header h1 {
+        font-size: 2rem;
+      }
+
+      ul.product-list {
+        grid-template-columns: 1fr;
+      }
+
+      ul.product-list img {
+        height: auto;
+        max-height: 500px;
+      }
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1>Home and Kitchen</h1>
@@ -146,55 +186,52 @@
   <!-- Tabs -->
   <div class="tabs">
     {% for category in products %}
-      {% if products[category] %}
-        <button class="tab-button" data-tab="{{ category }}">{{ category }}</button>
-      {% endif %}
+    {% if products[category] %}
+    <button class="tab-button" data-tab="{{ category }}">{{ category }}</button>
+    {% endif %}
     {% endfor %}
   </div>
 
   <!-- Tab Contents -->
   {% for category, items in products.items() %}
-    {% if items %}
-    <div class="tab-content" id="{{ category }}">
-      <ul class="product-list">
-        {% for product in items %}
-        <li>
-          <div class="splide" id="splide-{{ loop.index }}-{{ category }}">
-            <div class="splide__track">
-              <ul class="splide__list">
-                {% for image in product.images %}
-                <li class="splide__slide">
-                  <img src="{{ image }}" alt="{{ product.title }}" onclick="openModal(this.src)">
-                </li>
-                {% endfor %}
-              </ul>
-            </div>
+  {% if items %}
+  <div class="tab-content" id="{{ category }}">
+    <ul class="product-list">
+      {% for product in items %}
+      <li>
+        <div class="splide" id="splide-{{ loop.index }}-{{ category }}">
+          <div class="splide__track">
+            <ul class="splide__list">
+              {% for image in product.images %}
+              <li class="splide__slide">
+                <img src="{{ image }}" alt="{{ product.title }}" onclick="openModal(this.src)">
+              </li>
+              {% endfor %}
+            </ul>
           </div>
-          <p>{{ product.title }}</p>
-          <a href="{{ product.link }}" target="_blank">Buy on Amazon</a>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-    {% endif %}
+        </div>
+        <p>{{ product.title }}</p>
+        <a href="{{ product.link }}" target="_blank">Buy on Amazon</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
   {% endfor %}
 
   <div id="modal" onclick="closeModal()">
     <img id="modalImage" src="" alt="Modal image">
   </div>
 
-  <!-- Кнопка вверх -->
-  <button id="backToTop" title="Back to top">↑</button>
-
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       {% for category, items in products.items() %}
-        {% for product in items %}
-          new Splide('#splide-{{ loop.index }}-{{ category }}', {
-            type: 'loop', perPage: 1, pagination: false, arrows: true, height: 'auto'
-          }).mount();
-        {% endfor %}
+      {% for product in items %}
+      new Splide('#splide-{{ loop.index }}-{{ category }}', {
+        type: 'loop', perPage: 1, pagination: false, arrows: true, height: 'auto'
+      }).mount();
+      {% endfor %}
       {% endfor %}
 
       // Поиск
@@ -217,19 +254,6 @@
         });
       });
       document.querySelector('.tab-button')?.click();
-
-      // Back to Top
-      const backToTopBtn = document.getElementById('backToTop');
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-          backToTopBtn.style.display = 'flex';
-        } else {
-          backToTopBtn.style.display = 'none';
-        }
-      });
-      backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
     });
 
     function openModal(src) {
@@ -241,4 +265,5 @@
     }
   </script>
 </body>
+
 </html>
