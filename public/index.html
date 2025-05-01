@@ -322,6 +322,30 @@
             <ul class="splide__list">
               
               <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/51Wh5LZNaSL._AC_SX569_.jpg" alt="ECOVACS Pro Window Cleaning Robot" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/61-tYK1LI+L._AC_SY879_.jpg" alt="ECOVACS Pro Window Cleaning Robot" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/61cltkjUtAL._AC_SY879_.jpg" alt="ECOVACS Pro Window Cleaning Robot" onclick="openModal(this.src)">
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+        <p>ECOVACS Pro Window Cleaning Robot</p>
+        <a href="https://amzn.to/4jysbCG" target="_blank">Buy on Amazon</a>
+      </li>
+      
+      <li>
+        <div class="splide" id="splide-2-Cleaning">
+          <div class="splide__track">
+            <ul class="splide__list">
+              
+              <li class="splide__slide">
                 <img src="https://f.media-amazon.com/images/I/81LeGewL7iL._AC_SX569_.jpg" alt="Portable Carpet and Upholstery Cleaner Car and Auto Detailer" onclick="openModal(this.src)">
               </li>
               
@@ -341,7 +365,7 @@
       </li>
       
       <li>
-        <div class="splide" id="splide-2-Cleaning">
+        <div class="splide" id="splide-3-Cleaning">
           <div class="splide__track">
             <ul class="splide__list">
               
@@ -439,6 +463,10 @@
       }).mount();
       
       new Splide('#splide-2-Cleaning', {
+        type: 'loop', perPage: 1, pagination: false, arrows: true, height: 'auto'
+      }).mount();
+      
+      new Splide('#splide-3-Cleaning', {
         type: 'loop', perPage: 1, pagination: false, arrows: true, height: 'auto'
       }).mount();
       
