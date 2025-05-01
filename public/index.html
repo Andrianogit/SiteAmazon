@@ -322,6 +322,30 @@
             <ul class="splide__list">
               
               <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/81LeGewL7iL._AC_SX569_.jpg" alt="Portable Carpet and Upholstery Cleaner Car and Auto Detailer" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/71JnybCT+HL._AC_SX569_.jpg" alt="Portable Carpet and Upholstery Cleaner Car and Auto Detailer" onclick="openModal(this.src)">
+              </li>
+              
+              <li class="splide__slide">
+                <img src="https://f.media-amazon.com/images/I/71oefwijPkL._AC_SX569_.jpg" alt="Portable Carpet and Upholstery Cleaner Car and Auto Detailer" onclick="openModal(this.src)">
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+        <p>Portable Carpet and Upholstery Cleaner Car and Auto Detailer</p>
+        <a href="https://amzn.to/3GKPt9Q" target="_blank">Buy on Amazon</a>
+      </li>
+      
+      <li>
+        <div class="splide" id="splide-2-Cleaning">
+          <div class="splide__track">
+            <ul class="splide__list">
+              
+              <li class="splide__slide">
                 <img src="https://f.media-amazon.com/images/I/61xiotBsLhL._AC_SX569_.jpg" alt="Mop Cleaner for Sealed Hard Floors" onclick="openModal(this.src)">
               </li>
               
@@ -411,6 +435,10 @@
       
       
       new Splide('#splide-1-Cleaning', {
+        type: 'loop', perPage: 1, pagination: false, arrows: true, height: 'auto'
+      }).mount();
+      
+      new Splide('#splide-2-Cleaning', {
         type: 'loop', perPage: 1, pagination: false, arrows: true, height: 'auto'
       }).mount();
       
